@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_bf3c311e96228571___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.3">coverage.py v7.6.3</a>,
-            created at 2024-10-15 13:28 +0000
+            created at 2024-10-15 14:06 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -295,7 +295,7 @@
     <p class="run"><span class="n"><a id="t213" href="#t213">213</a></span><span class="t">        <span class="nam">dct</span> <span class="op">=</span> <span class="nam">parity</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t214" href="#t214">214</a></span><span class="t">        <span class="nam">poltype</span> <span class="op">=</span> <span class="str">"parity"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t215" href="#t215">215</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t216" href="#t216">216</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">unrecognized polarization '</span><span class="op">{</span><span class="nam">pols</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">decode</span><span class="op">(</span><span class="op">)</span><span class="op">}</span><span class="fst">'</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t216" href="#t216">216</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"unrecognized polarization '{pols[0].decode()}'"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t217" href="#t217">217</a></span><span class="t">    <span class="key">return</span> <span class="op">[</span><span class="nam">dct</span><span class="op">[</span><span class="nam">i</span><span class="op">.</span><span class="nam">decode</span><span class="op">(</span><span class="op">)</span><span class="op">]</span> <span class="key">for</span> <span class="nam">i</span> <span class="key">in</span> <span class="nam">pols</span><span class="op">]</span><span class="op">,</span> <span class="nam">poltype</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t218" href="#t218">218</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t219" href="#t219">219</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -405,9 +405,9 @@
     <p class="run"><span class="n"><a id="t323" href="#t323">323</a></span><span class="t">    <span class="nam">h5file</span><span class="op">[</span><span class="str">"embedding"</span><span class="op">]</span> <span class="op">=</span> <span class="nam">h5py</span><span class="op">.</span><span class="nam">SoftLink</span><span class="op">(</span><span class="nam">embedding_group</span><span class="op">.</span><span class="nam">name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t324" href="#t324">324</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t325" href="#t325">325</a></span><span class="t">    <span class="nam">h5file</span><span class="op">.</span><span class="nam">attrs</span><span class="op">[</span><span class="str">"created_with"</span><span class="op">]</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t326" href="#t326">326</a></span><span class="t">        <span class="fst">f"</span><span class="fst">python=</span><span class="op">{</span><span class="nam">sys</span><span class="op">.</span><span class="nam">version</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">}</span><span class="fst">,</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t327" href="#t327">327</a></span><span class="t">        <span class="fst">f"</span><span class="fst">h5py=</span><span class="op">{</span><span class="nam">version</span><span class="op">(</span><span class="str">'h5py'</span><span class="op">)</span><span class="op">}</span><span class="fst">,</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t328" href="#t328">328</a></span><span class="t">        <span class="fst">f"</span><span class="fst">treams=</span><span class="op">{</span><span class="nam">version</span><span class="op">(</span><span class="str">'treams'</span><span class="op">)</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t326" href="#t326">326</a></span><span class="t">        <span class="str">f"python={sys.version.split()[0]},"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t327" href="#t327">327</a></span><span class="t">        <span class="str">f"h5py={version('h5py')},"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t328" href="#t328">328</a></span><span class="t">        <span class="str">f"treams={version('treams')}"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t329" href="#t329">329</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t330" href="#t330">330</a></span><span class="t">    <span class="nam">h5file</span><span class="op">.</span><span class="nam">attrs</span><span class="op">[</span><span class="str">"storage_format_version"</span><span class="op">]</span> <span class="op">=</span> <span class="str">"0.0.1-4-g1266244"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t331" href="#t331">331</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -441,7 +441,7 @@
     <p class="mis show_mis"><span class="n"><a id="t359" href="#t359">359</a></span><span class="t">    <span class="key">if</span> <span class="nam">xtype</span> <span class="op">==</span> <span class="str">"angular_vacuum_wavenumber"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t360" href="#t360">360</a></span><span class="t">        <span class="nam">xunit</span> <span class="op">=</span> <span class="nam">INVLENGTHS</span><span class="op">[</span><span class="nam">xunit</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t361" href="#t361">361</a></span><span class="t">        <span class="key">return</span> <span class="nam">x</span> <span class="op">*</span> <span class="op">(</span><span class="nam">xunit</span> <span class="op">/</span> <span class="nam">k0unit</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t362" href="#t362">362</a></span><span class="t">    <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">unrecognized frequency/wavenumber/wavelength type: </span><span class="op">{</span><span class="nam">xtype</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t362" href="#t362">362</a></span><span class="t">    <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"unrecognized frequency/wavenumber/wavelength type: {xtype}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t363" href="#t363">363</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t364" href="#t364">364</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t365" href="#t365">365</a></span><span class="t"><span class="key">def</span> <span class="nam">load_hdf5</span><span class="op">(</span><span class="nam">filename</span><span class="op">,</span> <span class="nam">lunit</span><span class="op">=</span><span class="str">"nm"</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -560,7 +560,7 @@
             <a class="nav" href="z_bf3c311e96228571___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.3">coverage.py v7.6.3</a>,
-            created at 2024-10-15 13:28 +0000
+            created at 2024-10-15 14:06 +0000
         </p>
     </div>
 </footer>
