@@ -1,0 +1,4 @@
+treams.TMatrixC.expand
+======================
+
+.. autoattribute:: treams.TMatrixC.expand

@@ -1,0 +1,4 @@
+treams.PhysicsArray.efield
+==========================
+
+.. autoattribute:: treams.PhysicsArray.efield

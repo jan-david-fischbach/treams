@@ -1,0 +1,4 @@
+treams.TMatrix.translate
+========================
+
+.. autoattribute:: treams.TMatrix.translate
