@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">605 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">579<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">26<span class="text"> missing</span></button>
+            <span class="text">606 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">581<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">25<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">4<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -64,8 +64,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="index.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-10-14 11:56 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.3">coverage.py v7.6.3</a>,
+            created at 2024-10-15 12:59 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -547,7 +547,7 @@
     <p class="pln"><span class="n"><a id="t465" href="#t465">465</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t466" href="#t466">466</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t467" href="#t467">467</a></span><span class="t"><span class="nam">HANDLED_FUNCTIONS</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t468" href="#t468">468</a></span><span class="t"><span class="str">"""Dictionary of numpy functions implemented for AnnotatedArrays."""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t468" href="#t468">468</a></span><span class="t"><span class="str">"""Dictionary of numpy functions implemented for AnnotatedArrays."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t469" href="#t469">469</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t470" href="#t470">470</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t471" href="#t471">471</a></span><span class="t"><span class="key">def</span> <span class="nam">implements</span><span class="op">(</span><span class="nam">np_func</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -859,7 +859,7 @@
     <p class="run"><span class="n"><a id="t777" href="#t777">777</a></span><span class="t">                <span class="nam">dest</span> <span class="op">=</span> <span class="nam">out</span><span class="op">.</span><span class="nam">ann</span><span class="op">[</span><span class="nam">dim</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t778" href="#t778">778</a></span><span class="t">                <span class="key">for</span> <span class="nam">in_</span><span class="op">,</span> <span class="nam">iterdim</span> <span class="key">in</span> <span class="nam">zip</span><span class="op">(</span><span class="nam">inputs</span><span class="op">,</span> <span class="nam">iterdims</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t779" href="#t779">779</a></span><span class="t">                    <span class="key">if</span> <span class="nam">idim</span> <span class="op">>=</span> <span class="nam">len</span><span class="op">(</span><span class="nam">iterdim</span><span class="op">)</span> <span class="key">or</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">in_</span><span class="op">,</span> <span class="str">"ann"</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t780" href="#t780">780</a></span><span class="t">                        <span class="key">continue</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t780" href="#t780">780</a></span><span class="t">                        <span class="key">continue</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t781" href="#t781">781</a></span><span class="t">                    <span class="nam">source</span> <span class="op">=</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">in_</span><span class="op">,</span> <span class="str">"ann"</span><span class="op">,</span> <span class="op">{</span><span class="nam">iterdim</span><span class="op">[</span><span class="nam">idim</span><span class="op">]</span><span class="op">:</span> <span class="op">{</span><span class="op">}</span><span class="op">}</span><span class="op">)</span><span class="op">[</span><span class="nam">iterdim</span><span class="op">[</span><span class="nam">idim</span><span class="op">]</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t782" href="#t782">782</a></span><span class="t">                    <span class="nam">dest</span><span class="op">.</span><span class="nam">update</span><span class="op">(</span><span class="nam">source</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t783" href="#t783">783</a></span><span class="t">        <span class="key">return</span> <span class="nam">res</span>&nbsp;</span><span class="r"></span></p>
@@ -1311,8 +1311,8 @@
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-10-14 11:56 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.3">coverage.py v7.6.3</a>,
+            created at 2024-10-15 12:59 +0000
         </p>
     </div>
 </footer>
