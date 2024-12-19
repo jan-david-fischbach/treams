@@ -21,6 +21,8 @@ from treams.special._misc cimport (
     sqrt,
 )
 
+cimport treams.config
+
 
 # The preprocessor directives correct the missing macro in mingw-w64 by
 # substituting it with a corresponding function that is defined by cython anyway
@@ -81,7 +83,8 @@ cdef double complex _redincgamma(double n, double complex z) nogil:
     cdef long twicen = <long>(2 * n)
     if twicen != 2 * n:
         raise ValueError("l is not integer of half-integer")
-    cdef double singularity = 1e-7  # Value of the singularity: smaller is stronger
+    cdef double singularity = treams.config.SINGULARITY_REDINCGAMMA  
+    # Value of the singularity: smaller is stronger
     cdef double complex res
     if creal(z) * creal(z) + cimag(z) * cimag(z) < 1e-12:
         if twicen == 0:

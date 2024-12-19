@@ -16,3 +16,10 @@ or `parity`.
 """
 
 POLTYPE = "helicity"
+
+
+cdef float SINGULARITY_REDINCGAMMA = 1e-7
+
+def set_SINGULARITY_REDINCGAMMA(val):
+   global SINGULARITY_REDINCGAMMA
+   SINGULARITY_REDINCGAMMA = val
