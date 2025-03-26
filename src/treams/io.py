@@ -275,7 +275,8 @@ def save_hdf5(
     basis = tm.basis
     poltype = tm.poltype
 
-    k0s = np.zeros((tms_arr.shape)[:-2])
+    k0s = np.array([T.k0 for T in tms])
+    #k0s = np.zeros((tms_arr.shape)[:-2], complex)
     epsilon = np.zeros((tms_arr.shape)[:-2], complex)
     mu = np.zeros((tms_arr.shape)[:-2], complex)
     if poltype == "helicity":
@@ -286,7 +287,7 @@ def save_hdf5(
             raise ValueError(
                 "incompatible T-matrices: mixed poltypes or different bases"
             )
-        k0s.flat[i] = tm.k0
+        #k0s.flat[i] = tm.k0
         epsilon.flat[i] = tm.material.epsilon
         mu.flat[i] = tm.material.mu
         if poltype == "helicity":
