@@ -28,6 +28,9 @@ __all__ = [
     "vsw_M",
     "vsw_N",
     "vsw_A",
+    "vsw_M_ff",
+    "vsw_N_ff",
+    "vsw_A_ff",
     "vsw_rM",
     "vsw_rN",
     "vsw_rA",
@@ -99,6 +102,26 @@ cdef void loop_D_lldd(char **args, np.npy_intp *dims, np.npy_intp *steps, void *
         ip2 += steps[2]
         ip3 += steps[3]
         op0 += steps[4]
+
+
+cdef void loop_D_llddl(char **args, np.npy_intp *dims, np.npy_intp *steps, void *data) nogil:
+    cdef np.npy_intp i, n = dims[0]
+    cdef long ostep = steps[6] // sizeof(double_complex)
+    cdef void *func = <void*>data
+    cdef char *ip0 = args[0]
+    cdef char *ip1 = args[1]
+    cdef char *ip2 = args[2]
+    cdef char *ip3 = args[3]
+    cdef char *ip4 = args[4]
+    cdef char *op0 = args[5]
+    for i in range(n):
+        (<void(*)(long, long, double, double, long, double complex*, long) nogil>func)(<long>(<long*>ip0)[0], <long>(<long*>ip1)[0], <double>(<double*>ip2)[0], <double>(<double*>ip3)[0], <long>(<long*>ip4)[0], <double complex*>op0, ostep)
+        ip0 += steps[0]
+        ip1 += steps[1]
+        ip2 += steps[2]
+        ip3 += steps[3]
+        ip4 += steps[4]
+        op0 += steps[5]
 
 
 cdef void loop_D_llDd(char **args, np.npy_intp *dims, np.npy_intp *steps, void *data) nogil:
@@ -1424,6 +1447,124 @@ Returns:
     "(),(),(),(),()->(3)",  # signature
 )
 
+
+######################################FAR FIELDS####################################
+cdef np.PyUFuncGenericFunction gufunc_vsw_M_ff_loops[1]
+cdef void *gufunc_vsw_M_ff_data[1]
+cdef char gufunc_vsw_M_ff_types[5]
+
+gufunc_vsw_M_ff_loops[0] = <np.PyUFuncGenericFunction>loop_D_lldd
+gufunc_vsw_M_ff_types[0] = <char>np.NPY_LONG
+gufunc_vsw_M_ff_types[1] = <char>np.NPY_LONG
+gufunc_vsw_M_ff_types[2] = <char>np.NPY_DOUBLE
+gufunc_vsw_M_ff_types[3] = <char>np.NPY_DOUBLE
+gufunc_vsw_M_ff_types[4] = <char>np.NPY_CDOUBLE
+gufunc_vsw_M_ff_data[0] = <void*>_waves.vsw_M_ff
+
+vsw_M_ff = np.PyUFunc_FromFuncAndDataAndSignature(
+    gufunc_vsw_M_ff_loops,
+    gufunc_vsw_M_ff_data,
+    gufunc_vsw_M_ff_types,
+    1,  # number of supported input types
+    4,  # number of input args
+    1,  # number of output args
+    0,  # identity element
+    "vsw_M_ff",  # function name
+    r"""vsw_M_ff(l, m, theta, phi)
+
+Singular vector spherical wave M in the far field
+
+Args:
+    l (int, array_like): Degree :math:`l \geq 0`
+    m (int, array_like): Order :math:`|m| \leq l`
+    theta (float or complex, array_like): Polar angle
+    phi (float, array_like): Azimuthal angle
+
+Returns:
+    complex, 3-array
+""",  # docstring
+    0,  # unused
+    "(),(),(),()->(3)",  # signature
+)
+
+cdef np.PyUFuncGenericFunction gufunc_vsw_N_ff_loops[1]
+cdef void *gufunc_vsw_N_ff_data[1]
+cdef char gufunc_vsw_N_ff_types[5]
+
+gufunc_vsw_N_ff_loops[0] = <np.PyUFuncGenericFunction>loop_D_lldd
+gufunc_vsw_N_ff_types[0] = <char>np.NPY_LONG
+gufunc_vsw_N_ff_types[1] = <char>np.NPY_LONG
+gufunc_vsw_N_ff_types[2] = <char>np.NPY_DOUBLE
+gufunc_vsw_N_ff_types[3] = <char>np.NPY_DOUBLE
+gufunc_vsw_N_ff_types[4] = <char>np.NPY_CDOUBLE
+gufunc_vsw_N_ff_data[0] = <void*>_waves.vsw_N_ff
+
+vsw_N_ff = np.PyUFunc_FromFuncAndDataAndSignature(
+    gufunc_vsw_N_ff_loops,
+    gufunc_vsw_N_ff_data,
+    gufunc_vsw_N_ff_types,
+    1,  # number of supported input types
+    4,  # number of input args
+    1,  # number of output args
+    0,  # identity element
+    "vsw_N_ff",  # function name
+    r"""vsw_N_ff(l, m, theta, phi)
+
+Singular vector spherical wave N in the far field
+
+Args:
+    l (int, array_like): Degree :math:`l \geq 0`
+    m (int, array_like): Order :math:`|m| \leq l`
+    theta (float or complex, array_like): Polar angle
+    phi (float, array_like): Azimuthal angle
+
+Returns:
+    complex, 3-array
+""",  # docstring
+    0,  # unused
+    "(),(),(),()->(3)",  # signature
+)
+
+cdef np.PyUFuncGenericFunction gufunc_vsw_A_ff_loops[1]
+cdef void *gufunc_vsw_A_ff_data[1]
+cdef char gufunc_vsw_A_ff_types[6]
+
+gufunc_vsw_A_ff_loops[0] = <np.PyUFuncGenericFunction>loop_D_llddl
+gufunc_vsw_A_ff_types[0] = <char>np.NPY_LONG
+gufunc_vsw_A_ff_types[1] = <char>np.NPY_LONG
+gufunc_vsw_A_ff_types[2] = <char>np.NPY_DOUBLE
+gufunc_vsw_A_ff_types[3] = <char>np.NPY_DOUBLE
+gufunc_vsw_A_ff_types[4] = <char>np.NPY_LONG
+gufunc_vsw_A_ff_types[5] = <char>np.NPY_CDOUBLE
+gufunc_vsw_A_ff_data[0] = <void*>_waves.vsw_A_ff
+
+vsw_A_ff = np.PyUFunc_FromFuncAndDataAndSignature(
+    gufunc_vsw_A_ff_loops,
+    gufunc_vsw_A_ff_data,
+    gufunc_vsw_A_ff_types,
+    1,  # number of supported input types
+    5,  # number of input args
+    1,  # number of output args
+    0,  # identity element
+    "vsw_A_ff",  # function name
+    r"""vsw_A_ff(l, m, theta, phi)
+
+Singular vector spherical wave N in the far field
+
+Args:
+    l (int, array_like): Degree :math:`l \geq 0`
+    m (int, array_like): Order :math:`|m| \leq l`
+    theta (float or complex, array_like): Polar angle
+    phi (float, array_like): Azimuthal angle
+    p (bool, array_like): Helicity
+
+Returns:
+    complex, 3-array
+""",  # docstring
+    0,  # unused
+    "(),(),(),(),()->(3)",  # signature
+)
+######################################END FAR FIELDS####################################
 
 cdef np.PyUFuncGenericFunction gufunc_vsw_rM_loops[2]
 cdef void *gufunc_vsw_rM_data[2]

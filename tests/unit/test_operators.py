@@ -745,3 +745,37 @@ class TestEField:
             [0, 0], [3, 4], [-4, -3], r[..., None, 0], r[..., None, 1], r[..., None, 2]
         ).swapaxes(-1, -2)
         assert np.all(y == x)
+
+
+class TestEFarField:
+    def test_sw_sp(self):
+        modes = [[0, 3, -2, 0], [1, 1, 1, 1]]
+        positions = np.array([[0, 0, 0], [1, 0, 0]])
+        b = treams.SphericalWaveBasis(modes, positions)
+        theta_phis = np.array([[0, 0], [0,np.pi/3]])
+        k0 = 4
+        material = (4, 1, 1)
+        x = treams.efarfield(
+            theta_phis,
+            basis=b,
+            k0=k0,
+            poltype="parity",
+            material=material,
+            modetype="singular",
+        )
+
+    def test_sw_sh(self):
+        modes = [[0, 3, -2, 0], [1, 1, 1, 1]]
+        positions = np.array([[0, 0, 0], [1, 0, 0]])
+        b = treams.SphericalWaveBasis(modes, positions)
+        r = np.array([[0, 1, 2], [3, 4, 5]])
+        k0 = 4
+        material = (4, 1, 1)
+        x = treams.efarfield(
+            r,
+            basis=b,
+            k0=k0,
+            poltype="helicity",
+            material=material,
+            modetype="singular",
+        )

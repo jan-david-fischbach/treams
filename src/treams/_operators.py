@@ -1291,6 +1291,35 @@ def _sw_efield(r, basis, k0, material, modetype, poltype):
     res.ann[-2]["modetype"] = modetype
     return res
 
+def _sw_efarfield(theta_phi, basis, k0, material, poltype):
+    """Electric field of spherical waves."""
+    thetas, phis = theta_phi.T
+    res = None
+    if poltype == "helicity":
+        raise NotImplementedError("Far field are so far only implemented in parity basis")
+    elif poltype == "parity":
+        res = (1 - basis.pol[:, None]) * sc.vsw_M_ff(
+            basis.l,
+            basis.m,
+            thetas,
+            phis,
+        ) + basis.pol[:, None] * sc.vsw_N_ff(
+            basis.l,
+            basis.m,
+            thetas,
+            phis,
+        )
+    if res is None:
+        raise ValueError("invalid parameters")
+    
+    res = util.AnnotatedArray(res)
+    res.ann[-2]["basis"] = basis
+    res.ann[-2]["k0"] = k0
+    res.ann[-2]["material"] = material
+    res.ann[-2]["poltype"] = poltype
+    res.ann[-2]["modetype"] = "singular"
+    return res
+
 
 def _cw_efield(r, basis, k0, material, modetype, poltype):
     """Electric field of cylindrical waves."""
@@ -1415,6 +1444,39 @@ def efield(r, *, basis, k0, material=Material(), modetype=None, poltype=None):
         return _pw_efield(r, basis, k0, material, modetype, poltype).swapaxes(-1, -2)
     raise TypeError("invalid basis")
 
+def efarfield(theta_phi, *, basis, k0, material=Material(), modetype=None, poltype=None):
+    """Electric far field.
+
+    The resulting matrix maps the electric field coefficients of the given basis to the
+    electric far field (at pairs of angles theta and phi).
+
+    Args:
+        theta_phi (array-like): Evaluation directions
+        basis (:class:`~treams.BasisSet`): Basis set.
+        k0 (float): Wave number.
+        material (:class:`~treams.Material` or tuple, optional): Material parameters.
+        modetype (str, optional): Wave mode.
+        poltype (str, optional): Polarization, see also
+            :ref:`params:Polarizations`.
+    """
+    material = Material(material)
+    poltype = config.POLTYPE if poltype is None else poltype
+    if modetype == "regular":
+        raise NotImplementedError(
+            "Far field evaluations are only implemented for radiating basis sets"
+        )
+    
+    if isinstance(basis, core.SphericalWaveBasis):
+        return _sw_efarfield(theta_phi, basis, k0, material, poltype).swapaxes(-1, -2)
+    if isinstance(basis, core.CylindricalWaveBasis):
+        raise NotImplementedError(
+            "Far field evaluations are not implemented for cylindrical waves so far"
+        )
+    
+    raise NotImplementedError(
+        f"Far field evaluations not supported for this basis of type: {type(basis)}"
+    )
+
 
 class FieldOperator(Operator):
     def __init__(self, r):
@@ -1437,6 +1499,15 @@ class EField(FieldOperator):
     """
 
     _FUNC = staticmethod(efield)
+
+class EFarField(FieldOperator):
+    """Evaluation matrix for the electric far field.
+
+    When called as attribute of an object it returns a suitable matrix to evaluate asymptotic field
+    coefficients for evaluation points approaching infinite distance. See also :func:`efarfield`.
+    """
+
+    _FUNC = staticmethod(efarfield)
 
 
 def _sw_hfield(r, basis, k0, material, modetype, poltype):

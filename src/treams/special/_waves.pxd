@@ -38,8 +38,12 @@ cdef void vsw_A(long l, long m, double complex kr, number_t theta, double phi, l
 cdef void vsw_M(long l, long m, double complex kr, number_t theta, double phi, double complex *out, long i) nogil
 cdef void vsw_N(long l, long m, double complex kr, number_t theta, double phi, double complex *out, long i) nogil
 cdef void vsw_rA(long l, long m, number_t kr, number_t theta, double phi, long pol, double complex *out, long i) nogil
-cdef void vsw_rM(long l, long m, number_t kr, number_t theta, double phi, double complex *out, long i) nogil
-cdef void vsw_rN(long l, long m, number_t kr, number_t theta, double phi, double complex *out, long i) nogil
+cdef void vsw_rM(long l, long m, number_t kr, number_t theta, double phi,           double complex *out, long i) nogil
+cdef void vsw_rN(long l, long m, number_t kr, number_t theta, double phi,           double complex *out, long i) nogil
+
+cdef void vsw_M_ff(long l, long m, double theta, double phi,           double complex *out, long i) nogil
+cdef void vsw_N_ff(long l, long m, double theta, double phi,           double complex *out, long i) nogil
+cdef void vsw_A_ff(long l, long m, double theta, double phi, long pol, double complex *out, long i) nogil
 
 # vsw_L gufunc
 # vsw_rL gufunc

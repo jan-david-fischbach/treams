@@ -50,6 +50,7 @@ Functions
    chirality_density
    dfield
    efield
+   efarfield
    expand
    expandlattice
    hfield
@@ -74,6 +75,7 @@ from treams._operators import (  # noqa: F401
     ChangePoltype,
     DField,
     EField,
+    EFarField,
     Expand,
     ExpandLattice,
     FField,
@@ -86,6 +88,7 @@ from treams._operators import (  # noqa: F401
     changepoltype,
     dfield,
     efield,
+    efarfield,
     expand,
     expandlattice,
     ffield,

@@ -208,6 +208,16 @@ cdef void vsw_M(
     out[i] *= sh
     out[2 * i] *= sh
 
+cdef void vsw_M_ff(
+        long l, long m,
+        double theta, double phi,
+        double complex *out, long i
+) nogil:
+    """Far-Field of singular vector spherical wave M"""
+    vsh_X(l, m, theta, phi, out, i)
+    cdef double complex fac = cexp(1j * 0.5 * pi * (-l-1))
+    out[i] *= fac
+    out[2 * i] *= fac
 
 cdef void vsw_rM(
         long l, long m,
@@ -245,6 +255,16 @@ cdef void vsw_N(
     out[i] *= pref
     out[2 * i] *= pref
 
+cdef void vsw_N_ff(
+        long l, long m,
+        double theta, double phi,
+        double complex *out, long i
+) nogil:
+    """Far-Field of singular vector spherical wave N"""
+    vsh_Y(l, m, theta, phi, out, i)
+    cdef double complex fac = 1j * cexp(1j * 0.5 * pi * (-l-1))
+    out[i] *= fac
+    out[2 * i] *= fac
 
 cdef void vsw_rN(
         long l, long m,
@@ -276,6 +296,20 @@ cdef void vsw_A(
     out[i] = M_SQRT1_2 * (out[i] + sign * tmp[1])
     out[2 * i] = M_SQRT1_2 * (out[2 * i] + sign * tmp[2])
 
+cdef void vsw_A_ff(
+        long l, long m,
+        double theta, double phi,
+        long pol,
+        double complex *out, long i
+) nogil:
+    """Far-Field of singular vector spherical wave of well-defined helicity"""
+    cdef double sign = 1 if pol > 0 else -1
+    cdef double complex tmp[3]
+    vsw_N_ff(l, m, theta, phi, out, i)
+    vsw_M_ff(l, m, theta, phi, tmp, 1)
+    out[0]     = M_SQRT1_2 * (out[0] + sign * tmp[0])
+    out[i]     = M_SQRT1_2 * (out[i] + sign * tmp[1])
+    out[2 * i] = M_SQRT1_2 * (out[2 * i] + sign * tmp[2])
 
 cdef void vsw_rA(
         long l, long m,
