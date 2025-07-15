@@ -752,8 +752,8 @@ class TestEFarField:
         modes = [[0, 3, -2, 0], [1, 1, 1, 1]]
         positions = np.array([[0, 0, 0], [1, 0, 0]])
         b = treams.SphericalWaveBasis(modes, positions)
-        theta_phis = np.array([[0, 0], [0,np.pi/3]])
-        k0 = 4
+        theta_phis = np.array([[0, 0], [0,np.pi/3], [0,np.pi/6]]*2)
+        k0 = 1
         material = (4, 1, 1)
         x = treams.efarfield(
             theta_phis,
@@ -764,18 +764,42 @@ class TestEFarField:
             modetype="singular",
         )
 
+        nf = treams.efield(
+            np.array([[1,1,1], [1,1,0.5], [1,0.5,1]]*2),
+            basis=b,
+            k0=k0,
+            poltype="parity",
+            material=material,
+            modetype="singular",
+        )
+
+        print(f"{x.shape=}")
+        print(f"{nf.shape=}")
+        
     def test_sw_sh(self):
         modes = [[0, 3, -2, 0], [1, 1, 1, 1]]
         positions = np.array([[0, 0, 0], [1, 0, 0]])
         b = treams.SphericalWaveBasis(modes, positions)
-        r = np.array([[0, 1, 2], [3, 4, 5]])
+        theta_phis = np.array([[0, 0], [0,np.pi/3], [0,np.pi/6]]*2)
         k0 = 4
         material = (4, 1, 1)
         x = treams.efarfield(
-            r,
+            theta_phis,
             basis=b,
             k0=k0,
             poltype="helicity",
             material=material,
             modetype="singular",
         )
+
+        nf = treams.efield(
+            np.array([[1,1,1], [1,1,0.5], [1,0.5,1]]*2),
+            basis=b,
+            k0=k0,
+            poltype="helicity",
+            material=material,
+            modetype="singular",
+        )
+
+        print(f"{x.shape=}")
+        print(f"{nf.shape=}")

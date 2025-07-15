@@ -1186,6 +1186,7 @@ class PhysicsArray(util.AnnotatedArray):
     changepoltype = op.OperatorAttribute(op.ChangePoltype)
     """Polarization change matrix, see also :class:`treams.operators.ChangePoltype`."""
     efield = op.OperatorAttribute(op.EField)
+    efarfield = op.OperatorAttribute(op.EFarField)
     hfield = op.OperatorAttribute(op.HField)
     dfield = op.OperatorAttribute(op.DField)
     bfield = op.OperatorAttribute(op.BField)

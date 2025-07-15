@@ -1294,24 +1294,35 @@ def _sw_efield(r, basis, k0, material, modetype, poltype):
 def _sw_efarfield(theta_phi, basis, k0, material, poltype):
     """Electric field of spherical waves."""
     thetas, phis = theta_phi.T
+    thetas = thetas  [:, None]
+    phis   = phis    [:, None]
+    l, m = basis.l[None, :], basis.m[None, :]
+
+    unit_vectors = sc.sph2car(np.array([[1, *tp] for tp in theta_phi]))
+    phases = np.exp(-1j* k0 * material.nmp[None, basis.pol] * 
+                    np.dot(unit_vectors, basis.positions.T))
+    # print(f"{phases.shape=}")
+    
     res = None
     if poltype == "helicity":
-        raise NotImplementedError("Far field are so far only implemented in parity basis")
+        res = sc.vsw_A_ff(
+            l, m, thetas, phis,
+            basis.pol[None, :]
+        )
+        # print(f"{res.shape=}")
+
     elif poltype == "parity":
-        res = (1 - basis.pol[:, None]) * sc.vsw_M_ff(
-            basis.l,
-            basis.m,
-            thetas,
-            phis,
-        ) + basis.pol[:, None] * sc.vsw_N_ff(
-            basis.l,
-            basis.m,
-            thetas,
-            phis,
+        res = (1 - basis.pol[None, :, None]) * sc.vsw_M_ff(
+            l, m, thetas, phis
+        ) + basis.pol[None, :, None] * sc.vsw_N_ff(
+            l, m, thetas, phis
         )
     if res is None:
         raise ValueError("invalid parameters")
     
+    res = res * phases[..., None]
+    print(res)
+
     res = util.AnnotatedArray(res)
     res.ann[-2]["basis"] = basis
     res.ann[-2]["k0"] = k0
