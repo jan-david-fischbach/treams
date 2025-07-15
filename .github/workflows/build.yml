@@ -40,7 +40,7 @@ jobs:
       #   if: ${{ github.event_name == 'workflow_dispatch' }}
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.21.3
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: ./wheelhouse/*.whl
 
