@@ -1,13 +1,75 @@
 [build-system]
 requires = [
-    "setuptools<=70.1.1",
+    "setuptools>=61.0",
     "wheel",
-    "Cython",
-    "numpy",
-    "scipy",
+    "Cython>=0.29.24",
+    "numpy>=1.21.0",
+    "scipy>=1.6",
     "setuptools_scm>=6.2"
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "treams"
+dynamic = ["version"]
+description = "T-matrix scattering code for nanophotonic computations"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Dominik Beutel", email = "dominik.beutel@kit.edu"}
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Cython",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.21.0",
+    "scipy>=1.6; python_version<='3.9'",
+    "scipy>=1.14.1; python_version>='3.10'",
+]
+
+[project.optional-dependencies]
+coverage = [
+    "Cython",
+    "pytest-cov",
+]
+docs = [
+    "matplotlib",
+    "sphinx",
+]
+io = [
+    "h5py",
+    "gmsh",
+]
+test = [
+    "pytest",
+    "pytest-regressions",
+    "pandas",
+]
+
+[project.urls]
+Homepage = "https://github.com/tfp-photonics/treams"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.isort]
 profile = "black"
