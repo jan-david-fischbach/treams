@@ -496,6 +496,7 @@ class ChangePoltype(Operator):
         return self.FUNC(poltype, **kwargs)
 
 
+from joblib import Parallel, delayed
 def _sw_sw_expand(basis, to_basis, to_modetype, k0, material, modetype, poltype, where):
     """Expand spherical waves in spherical waves."""
     if not (
@@ -506,15 +507,16 @@ def _sw_sw_expand(basis, to_basis, to_modetype, k0, material, modetype, poltype,
         raise ValueError(f"invalid expansion from {modetype} to {to_modetype}")
     rs = sc.car2sph(to_basis.positions[:, None, :] - basis.positions)
     ks = k0 * material.nmp
-    res = sw.translate(
-        *(m[:, None] for m in to_basis.lms),
+    l,m,s = to_basis.lms
+    res = np.array(Parallel(n_jobs=-1)(delayed(sw.translate)(
+        l[i], m[i], s[i],
         *basis.lms,
-        ks[basis.pol] * rs[to_basis.pidx[:, None], basis.pidx, 0],
-        rs[to_basis.pidx[:, None], basis.pidx, 1],
-        rs[to_basis.pidx[:, None], basis.pidx, 2],
+        ks[basis.pol] * rs[to_basis.pidx[i], basis.pidx, 0],
+        rs[to_basis.pidx[i], basis.pidx, 1],
+        rs[to_basis.pidx[i], basis.pidx, 2],
         poltype=poltype,
         singular=modetype != to_modetype,
-        where=where,
+        where=where) for i in range(len(to_basis)))
     )
     res[..., np.logical_not(where)] = 0
     res = core.PhysicsArray(
@@ -523,6 +525,7 @@ def _sw_sw_expand(basis, to_basis, to_modetype, k0, material, modetype, poltype,
     if modetype == "singular" and to_modetype == "regular":
         res.modetype = (to_modetype, modetype)
     return res
+
 
 
 def _sw_cw_expand(basis, to_basis, k0, material, poltype, where):
