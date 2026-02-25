@@ -1,6 +1,0 @@
-treams.PhysicsArray.\_\_truediv\_\_
-===================================
-
-.. currentmodule:: treams
-
-.. automethod:: PhysicsArray.__truediv__

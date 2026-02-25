@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>treams._smatrix &#8212; Treams</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/treams/_smatrix';</script>
+    <link rel="canonical" href="https://tfp-photonics.github.io/treams/_modules/treams/_smatrix.html" />
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Treams</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Welcome to treams’ documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory and Usage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro.html">Gallery</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../params.html">Basis sets and other core parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physicsarray.html">Physics-aware arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tmatrix.html">T-Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tmatrixc.html">Cylindrical T-matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smatrix.html">S-Matrices for plane waves</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../notebooks.html">Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/array_spheres.html">Array of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/array_spheres_tmatrixc.html">Array of Spheres to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/band_structure.html">Bandstructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/chain.html">Field Evaluations in Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/chain_tmatrixc.html">Chain to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cluster.html">Cluster TMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cluster_tmatrixc.html">Cluster TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/crystal.html">Photonic Crystal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/crystal_tmatrixc.html">Photonic Crystal TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cylinder_tmatrixc.html">Infinite Cylinder TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/grating_tmatrixc.html">Grating from TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/grid.html">Grid of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/slab.html">Slab via SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/sphere.html">Single Sphere</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theory.html">Theory</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../treams.html">Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.CylindricalWaveBasis.html">treams.CylindricalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PlaneWaveBasisByUnitVector.html">treams.PlaneWaveBasisByUnitVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PlaneWaveBasisByComp.html">treams.PlaneWaveBasisByComp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SphericalWaveBasis.html">treams.SphericalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PhysicsArray.html">treams.PhysicsArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SMatrix.html">treams.SMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SMatrices.html">treams.SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.TMatrix.html">treams.TMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.TMatrixC.html">treams.TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.Lattice_class.html">treams.Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.Material.html">treams.Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.bfield.html">treams.bfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.changepoltype.html">treams.changepoltype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.chirality_density.html">treams.chirality_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.dfield.html">treams.dfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.efield.html">treams.efield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.expand.html">treams.expand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.expandlattice.html">treams.expandlattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.hfield.html">treams.hfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.permute.html">treams.permute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.plane_wave.html">treams.plane_wave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.rotate.html">treams.rotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.translate.html">treams.translate</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.sw.html">treams.sw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.periodic_to_cw.html">treams.sw.periodic_to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.periodic_to_pw.html">treams.sw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.rotate.html">treams.sw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.translate.html">treams.sw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.translate_periodic.html">treams.sw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.cw.html">treams.cw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.periodic_to_pw.html">treams.cw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.rotate.html">treams.cw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.to_sw.html">treams.cw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.translate.html">treams.cw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.translate_periodic.html">treams.cw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.pw.html">treams.pw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.to_cw.html">treams.pw.to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.to_sw.html">treams.pw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.translate.html">treams.pw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.permute_xyz.html">treams.pw.permute_xyz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.io.html">treams.io</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.coeffs.html">treams.coeffs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.mie.html">treams.coeffs.mie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.mie_cyl.html">treams.coeffs.mie_cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.fresnel.html">treams.coeffs.fresnel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.misc.html">treams.misc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.basischange.html">treams.misc.basischange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin1d.html">treams.misc.firstbrillouin1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin2d.html">treams.misc.firstbrillouin2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin3d.html">treams.misc.firstbrillouin3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.pickmodes.html">treams.misc.pickmodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.refractive_index.html">treams.misc.refractive_index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.wave_vec_z.html">treams.misc.wave_vec_z</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.config.html">treams.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.util.html">treams.util</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.lattice.html">treams.lattice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw1d.html">treams.lattice.lsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw1d_shift.html">treams.lattice.lsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw2d.html">treams.lattice.lsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw1d.html">treams.lattice.lsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw1d_shift.html">treams.lattice.lsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw2d.html">treams.lattice.lsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw2d_shift.html">treams.lattice.lsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw3d.html">treams.lattice.lsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw1d.html">treams.lattice.dsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw1d_shift.html">treams.lattice.dsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw2d.html">treams.lattice.dsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw1d.html">treams.lattice.dsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw1d_shift.html">treams.lattice.dsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw2d.html">treams.lattice.dsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw2d_shift.html">treams.lattice.dsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw3d.html">treams.lattice.dsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.area.html">treams.lattice.area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cube.html">treams.lattice.cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cubeedge.html">treams.lattice.cubeedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.diffr_orders_circle.html">treams.lattice.diffr_orders_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.reciprocal.html">treams.lattice.reciprocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.volume.html">treams.lattice.volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cython_lattice.html">treams.lattice.cython_lattice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.special.html">treams.special</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.hankel1_d.html">treams.special.hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.hankel2_d.html">treams.special.hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.jv_d.html">treams.special.jv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.yv_d.html">treams.special.yv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel1.html">treams.special.spherical_hankel1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel2.html">treams.special.spherical_hankel2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel1_d.html">treams.special.spherical_hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel2_d.html">treams.special.spherical_hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_jn_d.html">treams.special.spherical_jn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_yn_d.html">treams.special.spherical_yn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph_harm.html">treams.special.sph_harm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.lpmv.html">treams.special.lpmv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.incgamma.html">treams.special.incgamma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.intkambe.html">treams.special.intkambe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wignersmalld.html">treams.special.wignersmalld</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wignerd.html">treams.special.wignerd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wigner3j.html">treams.special.wigner3j</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.pi_fun.html">treams.special.pi_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tau_fun.html">treams.special.tau_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_X.html">treams.special.vsh_X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_Y.html">treams.special.vsh_Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_Z.html">treams.special.vsh_Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_M.html">treams.special.vsw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_N.html">treams.special.vsw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_A.html">treams.special.vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rM.html">treams.special.vsw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rN.html">treams.special.vsw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rA.html">treams.special.vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_A.html">treams.special.tl_vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_B.html">treams.special.tl_vsw_B</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_rA.html">treams.special.tl_vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_rB.html">treams.special.tl_vsw_rB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_M.html">treams.special.vcw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_N.html">treams.special.vcw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_A.html">treams.special.vcw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rM.html">treams.special.vcw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rN.html">treams.special.vcw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rA.html">treams.special.vcw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vcw.html">treams.special.tl_vcw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vcw_r.html">treams.special.tl_vcw_r</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_M.html">treams.special.vpw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_N.html">treams.special.vpw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_A.html">treams.special.vpw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2cyl.html">treams.special.car2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2sph.html">treams.special.car2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cyl2car.html">treams.special.cyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cyl2sph.html">treams.special.cyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph2car.html">treams.special.sph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph2cyl.html">treams.special.sph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2cyl.html">treams.special.vcar2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2sph.html">treams.special.vcar2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcyl2car.html">treams.special.vcyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcyl2sph.html">treams.special.vcyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsph2car.html">treams.special.vsph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsph2cyl.html">treams.special.vsph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2pol.html">treams.special.car2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.pol2car.html">treams.special.pol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2pol.html">treams.special.vcar2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpol2car.html">treams.special.vpol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cython_special.html">treams.special.cython_special</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">Development and contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams/issues/new?title=Issue%20on%20page%20%2F_modules/treams/_smatrix.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for treams._smatrix</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span><span class="p">,</span> <span class="n">util</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">PhysicsArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlaneWaveBasisByComp</span> <span class="k">as</span> <span class="n">PWBC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._material</span><span class="w"> </span><span class="kn">import</span> <span class="n">Material</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._operators</span><span class="w"> </span><span class="kn">import</span> <span class="n">translate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._tmatrix</span><span class="w"> </span><span class="kn">import</span> <span class="n">TMatrixC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams.coeffs</span><span class="w"> </span><span class="kn">import</span> <span class="n">fresnel</span>
+
+
+<div class="viewcode-block" id="SMatrix">
+<a class="viewcode-back" href="../../generated/treams.SMatrix.html#treams.SMatrix">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SMatrix</span><span class="p">(</span><span class="n">PhysicsArray</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;S-matrix for a plane wave.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_check</span><span class="p">()</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">util</span><span class="o">.</span><span class="n">AnnotationError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid shape: &#39;</span><span class="si">{</span><span class="n">shape</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="n">util</span><span class="o">.</span><span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid k0&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;parity&quot;</span><span class="p">,</span> <span class="s2">&quot;helicity&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">util</span><span class="o">.</span><span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid poltype&quot;</span><span class="p">)</span>
+        <span class="n">material</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">material</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">Material</span><span class="p">()</span> <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">material</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">util</span><span class="o">.</span><span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;basis not set&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">,</span> <span class="n">PWBC</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">bycomp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="p">)</span></div>
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">OperatorAttributeSMatrices</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">objtype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="n">obj</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="k">if</span> <span class="n">objtype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">objtype</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply_left</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_right</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply_right</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="SMatrices">
+<a class="viewcode-back" href="../../generated/treams.SMatrices.html#treams.SMatrices">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SMatrices</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Collection of four S-matrices with a plane wave basis.</span>
+
+<span class="sd">    The S-matrix describes the scattering of incoming into outgoing modes using a plane</span>
+<span class="sd">    wave basis, with functions :func:`treams.special.vsw_A`,</span>
+<span class="sd">    :func:`treams.special.vsw_M`, and :func:`treams.special.vsw_N`. The primary</span>
+<span class="sd">    direction of propagation is parallel or anti-parallel to the z-axis. The scattering</span>
+<span class="sd">    object itself is infinitely extended in the x- and y-directions. The S-matrix is</span>
+<span class="sd">    divided into four submatrices :math:`S_{\uparrow \uparrow}`,</span>
+<span class="sd">    :math:`S_{\uparrow \downarrow}`, :math:`S_{\downarrow \uparrow}`, and</span>
+<span class="sd">    :math:`S_{\downarrow \downarrow}`:</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        S = \begin{pmatrix}</span>
+<span class="sd">            S_{\uparrow \uparrow} &amp; S_{\uparrow \downarrow} \\</span>
+<span class="sd">            S_{\downarrow \uparrow} &amp; S_{\downarrow \downarrow}</span>
+<span class="sd">        \end{pmatrix}\,.</span>
+
+<span class="sd">    These matrices describe the transmission of plane waves propagating into positive</span>
+<span class="sd">    z-direction, reflection of plane waves into the positive z-direction, reflection of</span>
+<span class="sd">    plane waves into negative z-direction, and the transmission of plane waves</span>
+<span class="sd">    propagating in negative z-direction, respectively. Each of those for matrices</span>
+<span class="sd">    contain different diffraction orders and different polarizations. The polarizations</span>
+<span class="sd">    can be in either helicity of parity basis.</span>
+
+<span class="sd">    The wave number :attr:`k0` and, if not vacuum, the material :attr:`material` are</span>
+<span class="sd">    also required.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        smats (SMatrix): S-matrices.</span>
+<span class="sd">        k0 (float): Wave number in vacuum.</span>
+<span class="sd">        basis (PlaneWaveBasisByComp): The basis for the S-matrices.</span>
+<span class="sd">        material (tuple, Material, optional): Material definition, if a tuple of length</span>
+<span class="sd">            two is specified, this refers to the materials above and below the S-matrix.</span>
+<span class="sd">        poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">permute</span> <span class="o">=</span> <span class="n">OperatorAttributeSMatrices</span><span class="p">(</span><span class="s2">&quot;permute&quot;</span><span class="p">)</span>
+    <span class="n">translate</span> <span class="o">=</span> <span class="n">OperatorAttributeSMatrices</span><span class="p">(</span><span class="s2">&quot;translate&quot;</span><span class="p">)</span>
+    <span class="n">rotate</span> <span class="o">=</span> <span class="n">OperatorAttributeSMatrices</span><span class="p">(</span><span class="s2">&quot;rotate&quot;</span><span class="p">)</span>
+    <span class="n">changepoltype</span> <span class="o">=</span> <span class="n">OperatorAttributeSMatrices</span><span class="p">(</span><span class="s2">&quot;changepoltype&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SMatrices.__init__">
+<a class="viewcode-back" href="../../generated/treams.SMatrices.html#treams.SMatrices.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">smats</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialization.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">smats</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">smats</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">smats</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;invalid shape of S-matrices&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;material&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;material&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;material&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">smats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;material&quot;</span><span class="p">):</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">smats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">smats</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;material&quot;</span><span class="p">):</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">smats</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">material</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">material</span> <span class="o">=</span> <span class="n">material</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">smats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;material&quot;</span><span class="p">):</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">smats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">smats</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;material&quot;</span><span class="p">):</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">smats</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">Material</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">material</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">ma</span><span class="p">,</span> <span class="n">mb</span> <span class="o">=</span> <span class="n">material</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ma</span> <span class="o">=</span> <span class="n">mb</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="n">material</span><span class="p">)</span>
+        <span class="n">material</span> <span class="o">=</span> <span class="p">[[(</span><span class="n">ma</span><span class="p">,</span> <span class="n">mb</span><span class="p">),</span> <span class="p">(</span><span class="n">ma</span><span class="p">,</span> <span class="n">ma</span><span class="p">)],</span> <span class="p">[(</span><span class="n">mb</span><span class="p">,</span> <span class="n">mb</span><span class="p">),</span> <span class="p">(</span><span class="n">mb</span><span class="p">,</span> <span class="n">ma</span><span class="p">)]]</span>
+        <span class="n">modetype</span> <span class="o">=</span> <span class="p">[[(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">)],</span> <span class="p">[(</span><span class="s2">&quot;down&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">)]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sms</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="n">SMatrix</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="n">t</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">tr</span><span class="p">)</span>
+            <span class="p">]</span>
+            <span class="k">for</span> <span class="n">ar</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">tr</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">smats</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">basis</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">k0</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">k0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">poltype</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]):</span>
+            <span class="n">i</span><span class="o">.</span><span class="n">k0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">k0</span>
+            <span class="n">i</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span>
+            <span class="n">i</span><span class="o">.</span><span class="n">poltype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">other</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-14</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sms</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="n">key</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid key: &#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keys</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sms</span><span class="p">[</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sms</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interface</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">materials</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Planar interface between two media.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            basis (PlaneWaveBasisByComp): Basis definitions.</span>
+<span class="sd">            k0 (float): Wave number in vacuum</span>
+<span class="sd">            materials (Sequence[Material]): Material definitions.</span>
+<span class="sd">            poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+        <span class="n">materials</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">Material</span><span class="p">,</span> <span class="n">materials</span><span class="p">))</span>
+        <span class="n">ks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">m</span><span class="o">.</span><span class="n">ks</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span><span class="p">])</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">kxs</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">kx</span><span class="p">[</span><span class="n">choice</span><span class="p">],</span> <span class="n">basis</span><span class="o">.</span><span class="n">kx</span><span class="p">[</span><span class="o">~</span><span class="n">choice</span><span class="p">]</span>
+        <span class="n">kys</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">ky</span><span class="p">[</span><span class="n">choice</span><span class="p">],</span> <span class="n">basis</span><span class="o">.</span><span class="n">ky</span><span class="p">[</span><span class="o">~</span><span class="n">choice</span><span class="p">]</span>
+        <span class="n">qs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">basis</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">basis</span><span class="p">)),</span> <span class="nb">complex</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">kxs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">kxs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">kys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">kys</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="n">kzs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">kzs</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">kxs</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">kys</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]))</span>
+                    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span>
+                <span class="p">],</span>
+                <span class="o">-</span><span class="mi">2</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">vals</span> <span class="o">=</span> <span class="n">fresnel</span><span class="p">(</span><span class="n">ks</span><span class="p">,</span> <span class="n">kzs</span><span class="p">,</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">impedance</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span><span class="p">])</span>
+            <span class="n">qs</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">choice</span><span class="p">,</span> <span class="n">choice</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="n">vals</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">qs</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">choice</span><span class="p">,</span> <span class="o">~</span><span class="n">choice</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="n">vals</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">qs</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">~</span><span class="n">choice</span><span class="p">,</span> <span class="n">choice</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="n">vals</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">qs</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">~</span><span class="n">choice</span><span class="p">,</span> <span class="o">~</span><span class="n">choice</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="n">vals</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">,</span> <span class="n">pol</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">basis</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">kx2</span><span class="p">,</span> <span class="n">ky2</span><span class="p">,</span> <span class="n">pol2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">basis</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">kx</span> <span class="o">!=</span> <span class="n">kx2</span> <span class="ow">or</span> <span class="n">ky</span> <span class="o">!=</span> <span class="n">ky2</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="n">kzs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">m</span><span class="o">.</span><span class="n">kzs</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span><span class="p">])</span>
+                    <span class="n">vals</span> <span class="o">=</span> <span class="n">fresnel</span><span class="p">(</span><span class="n">ks</span><span class="p">,</span> <span class="n">kzs</span><span class="p">,</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">impedance</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span><span class="p">])</span>
+                    <span class="n">qs</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ii</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">pol2</span><span class="p">,</span> <span class="n">pol</span><span class="p">]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">poltype</span><span class="o">=</span><span class="s2">&quot;helicity&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">changepoltype</span><span class="p">(</span><span class="n">poltype</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">][</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">basis</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">][</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">basis</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">][</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">basis</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">][</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">basis</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slab</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">materials</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Slab of material.</span>
+
+<span class="sd">        A slab of material, defined by a thickness and three materials. Consecutive</span>
+<span class="sd">        slabs of material can be defined by `n` thicknesses and and `n + 2` material</span>
+<span class="sd">        parameters.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            k0 (float): Wave number in vacuum.</span>
+<span class="sd">            basis (PlaneWaveBasisByComp): Basis definition.</span>
+<span class="sd">            tickness (Sequence[Float]): Thickness of the slab or the thicknesses of all</span>
+<span class="sd">                slabs in order from negative to positive z.</span>
+<span class="sd">            materials (Sequenze[Material]): Material definitions from negative to</span>
+<span class="sd">                positive z.</span>
+<span class="sd">            poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">iter</span><span class="p">(</span><span class="n">thickness</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="n">thickness</span> <span class="o">=</span> <span class="p">[</span><span class="n">thickness</span><span class="p">]</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">interface</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">materials</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="n">poltype</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">d</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">mb</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">materials</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">materials</span><span class="p">[</span><span class="mi">2</span><span class="p">:]):</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">ndim</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="p">]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">propagation</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">poltype</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">interface</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="p">(</span><span class="n">ma</span><span class="p">,</span> <span class="n">mb</span><span class="p">),</span> <span class="n">poltype</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stack of S-matrices.</span>
+
+<span class="sd">        Electromagnetically couple multiple S-matrices in the order given. Before</span>
+<span class="sd">        coupling it can be checked for matching materials and modes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            items (Sequence[SMatrix]): An array of S-matrices in their intended order</span>
+<span class="sd">                from negative to positive z.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">acc</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">acc</span> <span class="o">=</span> <span class="n">acc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">acc</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">propagation</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">Material</span><span class="p">(),</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;S-matrix for the propagation along a distance.</span>
+
+<span class="sd">        This S-matrix translates the reference origin along `r`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            r (float, (3,)-array): Translation vector.</span>
+<span class="sd">            basis (PlaneWaveBasis): Basis definition.</span>
+<span class="sd">            k0 (float): Wave number in vacuum.</span>
+<span class="sd">            material (Material, optional): Material definition.</span>
+<span class="sd">            poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+        <span class="n">sup</span> <span class="o">=</span> <span class="n">translate</span><span class="p">(</span>
+            <span class="n">r</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span>
+        <span class="p">)</span>
+        <span class="n">sdown</span> <span class="o">=</span> <span class="n">translate</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">negative</span><span class="p">(</span><span class="n">r</span><span class="p">),</span>
+            <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+            <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span>
+            <span class="n">modetype</span><span class="o">=</span><span class="s2">&quot;down&quot;</span><span class="p">,</span>
+            <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">zero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">sup</span><span class="p">)</span>
+        <span class="n">material</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="n">material</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="p">[[</span><span class="n">sup</span><span class="p">,</span> <span class="n">zero</span><span class="p">],</span> <span class="p">[</span><span class="n">zero</span><span class="p">,</span> <span class="n">sdown</span><span class="p">]],</span>
+            <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+            <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span>
+            <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_array</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tm</span><span class="p">,</span> <span class="n">basis</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;S-matrix from an array of (cylindrical) T-matrices.</span>
+
+<span class="sd">        Create a S-matrix for a two-dimensional array of objects described by the</span>
+<span class="sd">        T-Matrix or an one-dimensional array of objects described by a cylindrical</span>
+<span class="sd">        T-matrix.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            tm (TMatrix or TMatrixC): (Cylindrical) T-matrix to place in the array.</span>
+<span class="sd">            basis (PlaneWaveBasisByComp): Basis definition.</span>
+<span class="sd">            eta (float or complex, optional): Splitting parameter in the lattice sum.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">TMatrixC</span><span class="p">):</span>
+            <span class="n">basis</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">pu</span><span class="p">,</span> <span class="n">pd</span> <span class="o">=</span> <span class="p">(</span><span class="n">tm</span><span class="o">.</span><span class="n">expandlattice</span><span class="p">(</span><span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">))</span>
+        <span class="n">au</span><span class="p">,</span> <span class="n">ad</span> <span class="o">=</span> <span class="p">(</span><span class="n">tm</span><span class="o">.</span><span class="n">expand</span><span class="o">.</span><span class="n">eval_inv</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">))</span>
+        <span class="n">eye</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">basis</span><span class="p">))</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">([[</span><span class="n">eye</span> <span class="o">+</span> <span class="n">pu</span> <span class="o">@</span> <span class="n">au</span><span class="p">,</span> <span class="n">pu</span> <span class="o">@</span> <span class="n">ad</span><span class="p">],</span> <span class="p">[</span><span class="n">pd</span> <span class="o">@</span> <span class="n">au</span><span class="p">,</span> <span class="n">eye</span> <span class="o">+</span> <span class="n">pd</span> <span class="o">@</span> <span class="n">ad</span><span class="p">]])</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">TMatrixC</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">permute</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sm</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Couple another S-matrix on top of the current one.</span>
+
+<span class="sd">        See also :func:`treams.SMatrix.stack` for a function that does not change the</span>
+<span class="sd">        current S-matrix but creates a new one.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            sm (SMatrix): S-matrix to add.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">)</span>
+        <span class="n">snew</span> <span class="o">=</span> <span class="p">[[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]]</span>
+        <span class="n">s_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">sm</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">snew</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sm</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">s_tmp</span>
+        <span class="n">snew</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">sm</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">s_tmp</span>
+        <span class="n">s_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span> <span class="o">-</span> <span class="n">sm</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">sm</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">snew</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">s_tmp</span>
+        <span class="n">snew</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sm</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sm</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">s_tmp</span>
+        <span class="k">return</span> <span class="n">SMatrices</span><span class="p">(</span><span class="n">snew</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Double the S-matrix.</span>
+
+<span class="sd">        By default this function doubles the S-matrix but it can also create a</span>
+<span class="sd">        :math:`2^n`-fold repetition of itself:</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            n (int, optional): Number of times to double itself. Defaults to 1.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            SMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">illuminate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">illu</span><span class="p">,</span> <span class="n">illu2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">smat</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Field coefficients above and below the S-matrix.</span>
+
+<span class="sd">        Given an illumination defined by the coefficients of each incoming mode</span>
+<span class="sd">        calculate the coefficients for the outgoing field above and below the S-matrix.</span>
+<span class="sd">        If a second SMatrix is given, the field expansions in between are also</span>
+<span class="sd">        calculated.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            illu (array-like): Illumination, if `modetype` is specified, the direction</span>
+<span class="sd">                will be chosen accordingly.</span>
+<span class="sd">            illu2 (array-like, optional): Second illumination. If used, the first</span>
+<span class="sd">                argument is taken to be coming from below and this one to be coming from</span>
+<span class="sd">                above.</span>
+<span class="sd">            smat (SMatrix, optional): Second S-matrix for the calculation of the</span>
+<span class="sd">                field expansion between two S-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">modetype</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">illu</span><span class="p">,</span> <span class="s2">&quot;modetype&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modetype</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">modetype</span> <span class="o">=</span> <span class="n">modetype</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="nb">tuple</span><span class="p">))]</span>
+        <span class="n">illu2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">illu</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span> <span class="k">if</span> <span class="n">illu2</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">illu2</span>
+        <span class="k">if</span> <span class="n">modetype</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span><span class="p">:</span>
+            <span class="n">illu</span><span class="p">,</span> <span class="n">illu2</span> <span class="o">=</span> <span class="n">illu2</span><span class="p">,</span> <span class="n">illu</span>
+        <span class="k">if</span> <span class="n">smat</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">field_up</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu</span> <span class="o">+</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu2</span>
+            <span class="n">field_down</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu</span> <span class="o">+</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu2</span>
+            <span class="k">return</span> <span class="n">field_up</span><span class="p">,</span> <span class="n">field_down</span>
+        <span class="n">stmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">))</span> <span class="o">-</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">smat</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">field_in_up</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span>
+            <span class="n">stmp</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu</span> <span class="o">+</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">smat</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu2</span>
+        <span class="p">)</span>
+        <span class="n">field_in_down</span> <span class="o">=</span> <span class="n">smat</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">field_in_up</span> <span class="o">+</span> <span class="n">smat</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu2</span>
+        <span class="n">field_up</span> <span class="o">=</span> <span class="n">smat</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu2</span> <span class="o">+</span> <span class="n">smat</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">field_in_up</span>
+        <span class="n">field_down</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu</span> <span class="o">+</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">field_in_down</span>
+        <span class="k">return</span> <span class="n">field_up</span><span class="p">,</span> <span class="n">field_down</span><span class="p">,</span> <span class="n">field_in_up</span><span class="p">,</span> <span class="n">field_in_down</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">tr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">illu</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Transmittance and reflectance.</span>
+
+<span class="sd">        Calculate the transmittance and reflectance for one S-matrix with the given</span>
+<span class="sd">        illumination and direction.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            illu (complex, array_like): Expansion coefficients for the incoming light</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">modetype</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">illu</span><span class="p">,</span> <span class="s2">&quot;modetype&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">modetype</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">modetype</span> <span class="o">=</span> <span class="n">modetype</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="nb">tuple</span><span class="p">))]</span>
+        <span class="n">trans</span><span class="p">,</span> <span class="n">refl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">illuminate</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+        <span class="n">material</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">material</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">material</span> <span class="o">=</span> <span class="n">material</span><span class="p">,</span> <span class="n">material</span>
+        <span class="n">paz</span> <span class="o">=</span> <span class="p">[</span><span class="n">poynting_avg_z</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">material</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">modetype</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span><span class="p">:</span>
+            <span class="n">trans</span><span class="p">,</span> <span class="n">refl</span> <span class="o">=</span> <span class="n">refl</span><span class="p">,</span> <span class="n">trans</span>
+            <span class="n">paz</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="n">illu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+        <span class="n">s_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">trans</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">paz</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">trans</span><span class="p">)</span>
+        <span class="n">s_r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">refl</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">paz</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">refl</span><span class="p">)</span>
+        <span class="n">s_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">conjugate</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">paz</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu</span><span class="p">)</span>
+        <span class="n">s_ir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span>
+            <span class="n">refl</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">paz</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">illu</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">conjugate</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">paz</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">@</span> <span class="n">refl</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">s_t</span> <span class="o">/</span> <span class="p">(</span><span class="n">s_i</span> <span class="o">+</span> <span class="n">s_ir</span><span class="p">),</span> <span class="n">s_r</span> <span class="o">/</span> <span class="p">(</span><span class="n">s_i</span> <span class="o">+</span> <span class="n">s_ir</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">cd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">illu</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Transmission and absorption circular dichroism.</span>
+
+<span class="sd">        Calculate the transmission and absorption CD for one S-matrix with the given</span>
+<span class="sd">        illumination and direction.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            illu (complex, PhysicsArray): Expansion coefficients for the incoming light</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">minus</span><span class="p">,</span> <span class="n">plus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+            <span class="n">illuopposite</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+            <span class="n">illuopposite</span><span class="p">[</span><span class="n">minus</span><span class="p">]</span> <span class="o">=</span> <span class="n">illu</span><span class="p">[</span><span class="n">plus</span><span class="p">]</span>
+            <span class="n">illuopposite</span><span class="p">[</span><span class="n">plus</span><span class="p">]</span> <span class="o">=</span> <span class="n">illu</span><span class="p">[</span><span class="n">minus</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">illuopposite</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+            <span class="n">illuopposite</span><span class="p">[</span><span class="n">minus</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">tm</span><span class="p">,</span> <span class="n">rm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+        <span class="n">tp</span><span class="p">,</span> <span class="n">rp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="n">illuopposite</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">tp</span> <span class="o">-</span> <span class="n">tm</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">tm</span><span class="p">),</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">rp</span> <span class="o">-</span> <span class="n">tm</span> <span class="o">-</span> <span class="n">rm</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">rp</span> <span class="o">+</span> <span class="n">tm</span> <span class="o">+</span> <span class="n">rm</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">periodic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Periodic repetition of the S-matrix.</span>
+
+<span class="sd">        Transform the S-matrix to an infinite periodic arrangement of itself defined</span>
+<span class="sd">        by</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \begin{pmatrix}</span>
+<span class="sd">                S_{\uparrow \uparrow} &amp; S_{\uparrow \downarrow} \\</span>
+<span class="sd">                -S_{\downarrow \downarrow}^{-1}</span>
+<span class="sd">                S_{\downarrow \uparrow} S_{\uparrow \uparrow} &amp;</span>
+<span class="sd">                S_{\downarrow \downarrow}^{-1} (\mathbb{1} - S_{\downarrow \uparrow}</span>
+<span class="sd">                S_{\uparrow \downarrow})</span>
+<span class="sd">            \end{pmatrix}\,.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            complex, array_like</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">dim</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dim</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">dim</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">res</span><span class="p">[</span><span class="n">dim</span><span class="p">:,</span> <span class="mi">0</span><span class="p">:</span><span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">res</span><span class="p">[</span><span class="n">dim</span><span class="p">:,</span> <span class="n">dim</span><span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">bands_kz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">az</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Band structure calculation.</span>
+
+<span class="sd">        Calculate the band structure for the given S-matrix, assuming it is periodically</span>
+<span class="sd">        repeated along the z-axis. The function returns the z-components of the wave</span>
+<span class="sd">        vector :math:`k_z` and the corresponding eigenvectors :math:`v` of</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \begin{pmatrix}</span>
+<span class="sd">                S_{\uparrow \uparrow} &amp; S_{\uparrow \downarrow} \\</span>
+<span class="sd">                -S_{\downarrow \downarrow}^{-1} S_{\downarrow \uparrow}</span>
+<span class="sd">                    S_{\uparrow \uparrow} &amp;</span>
+<span class="sd">                S_{\downarrow \downarrow}^{-1} (\mathbb{1} - S_{\downarrow \uparrow}</span>
+<span class="sd">                    S_{\uparrow \downarrow})</span>
+<span class="sd">            \end{pmatrix}</span>
+<span class="sd">            \boldsymbol v</span>
+<span class="sd">            =</span>
+<span class="sd">            \mathrm{e}^{\mathrm{i}k_z a_z}</span>
+<span class="sd">            \boldsymbol v\,.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            az (float): Lattice pitch along the z direction</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">periodic</span><span class="p">())</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">/</span> <span class="n">az</span><span class="p">,</span> <span class="n">v</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(...,</span>
+<span class="s2">    basis=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="si">}</span><span class="s2">,</span>
+<span class="s2">    k0=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="si">}</span><span class="s2">,</span>
+<span class="s2">    material=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="si">}</span><span class="s2">,</span>
+<span class="s2">    poltype=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;,</span>
+<span class="s2">)&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="chirality_density">
+<a class="viewcode-back" href="../../generated/treams.chirality_density.html#treams.chirality_density">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">chirality_density</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">Material</span><span class="p">(),</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span>
+    <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+    <span class="n">material</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="n">material</span><span class="p">)</span>
+    <span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">,</span> <span class="n">kz</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">kvecs</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">material</span><span class="o">.</span><span class="n">ks</span><span class="p">(</span><span class="n">k0</span><span class="p">)[</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">]</span>
+    <span class="n">re</span><span class="p">,</span> <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">kz</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">kz</span><span class="p">)</span>
+    <span class="n">prefuu</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">((</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span> <span class="o">-</span> <span class="n">kz</span> <span class="o">*</span> <span class="mi">2</span><span class="n">j</span> <span class="o">*</span> <span class="n">im</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()))</span>
+    <span class="n">prefdu</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">((</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span> <span class="o">-</span> <span class="n">kz</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">re</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()))</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mf">1e-16</span><span class="p">:</span>
+        <span class="n">prefuu</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sinh</span><span class="p">(</span><span class="n">re</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="o">/</span> <span class="p">(</span><span class="n">re</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="n">prefdd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">im</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="n">prefuu</span>
+        <span class="n">prefuu</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">im</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="n">prefdu</span> <span class="o">*=</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">re</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">re</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="o">/</span> <span class="p">(</span><span class="n">re</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prefdd</span> <span class="o">=</span> <span class="n">prefuu</span>
+    <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">prefuu</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)),</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">prefdd</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)),</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">prefdu</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)),</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;parity&quot;</span><span class="p">:</span>
+        <span class="n">where</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">kx</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">==</span> <span class="n">kx</span><span class="p">)</span>
+            <span class="o">&amp;</span> <span class="p">(</span><span class="n">ky</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">==</span> <span class="n">ky</span><span class="p">)</span>
+            <span class="o">&amp;</span> <span class="p">(</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">!=</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">where</span> <span class="o">*</span> <span class="n">prefuu</span><span class="p">,</span> <span class="n">where</span> <span class="o">*</span> <span class="n">prefdd</span><span class="p">,</span> <span class="n">where</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">prefdu</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid poltype: &#39;</span><span class="si">{</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">poynting_avg_z</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">Material</span><span class="p">(),</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Time-averaged z-component of the Poynting vector.</span>
+
+<span class="sd">    Calculate the time-averaged Poynting vector&#39;s z-component</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        \langle S_z \rangle</span>
+<span class="sd">        = \frac{1}{2}</span>
+<span class="sd">        \Re (\boldsymbol E \times \boldsymbol H^\ast) \boldsymbol{\hat{z}}</span>
+
+<span class="sd">    on one side of the S-matrix with the given coefficients.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+    <span class="n">material</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="n">material</span><span class="p">)</span>
+    <span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">,</span> <span class="n">kzs</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">kvecs</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="p">)</span>
+    <span class="n">gamma</span> <span class="o">=</span> <span class="n">kzs</span> <span class="o">/</span> <span class="p">(</span><span class="n">material</span><span class="o">.</span><span class="n">ks</span><span class="p">(</span><span class="n">k0</span><span class="p">)[</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">]</span> <span class="o">*</span> <span class="n">material</span><span class="o">.</span><span class="n">impedance</span><span class="p">)</span>
+    <span class="n">selection</span> <span class="o">=</span> <span class="p">(</span><span class="n">kx</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">==</span> <span class="n">kx</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ky</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">==</span> <span class="n">ky</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;parity&quot;</span><span class="p">:</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span>
+        <span class="n">selection</span> <span class="o">=</span> <span class="n">selection</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">pol</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">==</span> <span class="n">pol</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">selection</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">pol</span><span class="p">)</span> <span class="o">*</span> <span class="n">gamma</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span> <span class="o">+</span> <span class="n">pol</span> <span class="o">*</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">selection</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">pol</span><span class="p">)</span> <span class="o">*</span> <span class="n">gamma</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span> <span class="o">-</span> <span class="n">pol</span> <span class="o">*</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+    <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">selection</span> <span class="o">*</span> <span class="p">(</span><span class="n">pol</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">pol</span> <span class="o">*</span> <span class="n">gamma</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span> <span class="o">+</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">selection</span> <span class="o">*</span> <span class="p">(</span><span class="n">pol</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">pol</span> <span class="o">*</span> <span class="n">gamma</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span> <span class="o">-</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid poltype: &#39;</span><span class="si">{</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dominik Beutel, Elias Herzog, Jan David Fischbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

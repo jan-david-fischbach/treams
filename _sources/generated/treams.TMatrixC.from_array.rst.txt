@@ -1,6 +1,0 @@
-treams.TMatrixC.from\_array
-===========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.from_array

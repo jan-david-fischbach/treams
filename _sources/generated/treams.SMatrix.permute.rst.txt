@@ -1,4 +1,0 @@
-treams.SMatrix.permute
-======================
-
-.. autoattribute:: treams.SMatrix.permute

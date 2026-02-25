@@ -1,6 +1,0 @@
-treams.Lattice.volume
-=====================
-
-.. currentmodule:: treams
-
-.. autoproperty:: Lattice.volume

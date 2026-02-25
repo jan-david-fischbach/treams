@@ -1,4 +1,0 @@
-treams.SMatrix.rotate
-=====================
-
-.. autoattribute:: treams.SMatrix.rotate

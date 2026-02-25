@@ -1,6 +1,0 @@
-treams.TMatrixC.cumsum
-======================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.cumsum

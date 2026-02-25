@@ -1,6 +1,0 @@
-treams.PhysicsArray.imag
-========================
-
-.. currentmodule:: treams
-
-.. autoproperty:: PhysicsArray.imag

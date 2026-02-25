@@ -1,6 +1,0 @@
-treams.TMatrixC.swapaxes
-========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.swapaxes

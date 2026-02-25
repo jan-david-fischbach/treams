@@ -1,6 +1,0 @@
-treams.SMatrices.periodic
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrices.periodic

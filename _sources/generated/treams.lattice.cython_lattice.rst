@@ -1,0 +1,24 @@
+treams.lattice.cython\_lattice
+==============================
+
+.. automodule:: treams.lattice.cython_lattice
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      diffr_orders_circle
+      dsumcw1d
+      dsumsw1d
+      lsumcw1d
+      lsumsw1d
+      ncube
+      nedge
+      realsumcw1d
+      realsumsw1d
+      recsumcw1d
+      recsumsw1d
+      zero2d
+      zero3d
+   

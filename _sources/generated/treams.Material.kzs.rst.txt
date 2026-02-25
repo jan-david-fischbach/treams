@@ -1,6 +1,0 @@
-treams.Material.kzs
-===================
-
-.. currentmodule:: treams
-
-.. automethod:: Material.kzs

@@ -1,6 +1,0 @@
-treams.SMatrix.prod
-===================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.prod

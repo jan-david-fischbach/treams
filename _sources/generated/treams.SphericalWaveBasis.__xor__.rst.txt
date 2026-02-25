@@ -1,6 +1,0 @@
-treams.SphericalWaveBasis.\_\_xor\_\_
-=====================================
-
-.. currentmodule:: treams
-
-.. automethod:: SphericalWaveBasis.__xor__

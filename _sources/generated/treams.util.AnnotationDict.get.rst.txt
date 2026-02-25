@@ -1,6 +1,0 @@
-treams.util.AnnotationDict.get
-==============================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationDict.get

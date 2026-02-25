@@ -1,6 +1,0 @@
-treams.TMatrix.\_\_rshift\_\_
-=============================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.__rshift__

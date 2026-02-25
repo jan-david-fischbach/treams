@@ -1,6 +1,0 @@
-treams.SMatrices.double
-=======================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrices.double

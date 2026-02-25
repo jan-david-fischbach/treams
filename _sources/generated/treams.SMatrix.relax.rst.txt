@@ -1,6 +1,0 @@
-treams.SMatrix.relax
-====================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.relax

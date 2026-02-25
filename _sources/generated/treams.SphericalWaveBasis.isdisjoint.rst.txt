@@ -1,6 +1,0 @@
-treams.SphericalWaveBasis.isdisjoint
-====================================
-
-.. currentmodule:: treams
-
-.. automethod:: SphericalWaveBasis.isdisjoint

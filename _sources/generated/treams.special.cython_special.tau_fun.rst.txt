@@ -1,6 +1,0 @@
-treams.special.cython\_special.tau\_fun
-=======================================
-
-.. currentmodule:: treams.special.cython_special
-
-.. autofunction:: tau_fun

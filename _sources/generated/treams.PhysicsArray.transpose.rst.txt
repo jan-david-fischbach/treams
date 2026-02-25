@@ -1,6 +1,0 @@
-treams.PhysicsArray.transpose
-=============================
-
-.. currentmodule:: treams
-
-.. automethod:: PhysicsArray.transpose

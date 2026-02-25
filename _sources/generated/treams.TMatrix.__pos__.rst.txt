@@ -1,6 +1,0 @@
-treams.TMatrix.\_\_pos\_\_
-==========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.__pos__

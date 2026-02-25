@@ -1,6 +1,0 @@
-treams.SMatrix.trace
-====================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.trace

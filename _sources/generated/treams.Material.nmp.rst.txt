@@ -1,6 +1,0 @@
-treams.Material.nmp
-===================
-
-.. currentmodule:: treams
-
-.. autoproperty:: Material.nmp

@@ -1,6 +1,0 @@
-treams.util.SequenceAsDict.popitem
-==================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: SequenceAsDict.popitem

@@ -1,6 +1,0 @@
-treams.special.cython\_special.sph\_harm
-========================================
-
-.. currentmodule:: treams.special.cython_special
-
-.. autofunction:: sph_harm

@@ -1,6 +1,0 @@
-treams.SphericalWaveBasis.isglobal
-==================================
-
-.. currentmodule:: treams
-
-.. autoproperty:: SphericalWaveBasis.isglobal

@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.cumsum
-=================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotatedArray.cumsum

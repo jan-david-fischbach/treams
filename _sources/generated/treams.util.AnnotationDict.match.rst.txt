@@ -1,6 +1,0 @@
-treams.util.AnnotationDict.match
-================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationDict.match

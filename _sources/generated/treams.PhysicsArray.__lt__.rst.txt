@@ -1,6 +1,0 @@
-treams.PhysicsArray.\_\_lt\_\_
-==============================
-
-.. currentmodule:: treams
-
-.. automethod:: PhysicsArray.__lt__

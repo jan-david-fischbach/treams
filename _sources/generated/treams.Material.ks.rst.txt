@@ -1,6 +1,0 @@
-treams.Material.ks
-==================
-
-.. currentmodule:: treams
-
-.. automethod:: Material.ks

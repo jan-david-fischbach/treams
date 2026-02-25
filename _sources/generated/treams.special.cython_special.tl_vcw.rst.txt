@@ -1,6 +1,0 @@
-treams.special.cython\_special.tl\_vcw
-======================================
-
-.. currentmodule:: treams.special.cython_special
-
-.. autofunction:: tl_vcw

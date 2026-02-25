@@ -1,6 +1,0 @@
-treams.Material.ischiral
-========================
-
-.. currentmodule:: treams
-
-.. autoproperty:: Material.ischiral

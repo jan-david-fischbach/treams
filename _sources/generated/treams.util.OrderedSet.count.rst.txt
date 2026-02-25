@@ -1,6 +1,0 @@
-treams.util.OrderedSet.count
-============================
-
-.. currentmodule:: treams.util
-
-.. automethod:: OrderedSet.count

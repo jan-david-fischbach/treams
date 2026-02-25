@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.size
-===============================
-
-.. currentmodule:: treams.util
-
-.. autoproperty:: AnnotatedArray.size

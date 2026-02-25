@@ -1,6 +1,0 @@
-treams.TMatrix.\_\_getitem\_\_
-==============================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.__getitem__

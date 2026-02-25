@@ -1,6 +1,0 @@
-treams.SphericalWaveBasis.\_\_getitem\_\_
-=========================================
-
-.. currentmodule:: treams
-
-.. automethod:: SphericalWaveBasis.__getitem__

@@ -1,4 +1,0 @@
-treams.TMatrix.efield
-=====================
-
-.. autoattribute:: treams.TMatrix.efield

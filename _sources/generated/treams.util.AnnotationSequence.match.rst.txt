@@ -1,6 +1,0 @@
-treams.util.AnnotationSequence.match
-====================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationSequence.match

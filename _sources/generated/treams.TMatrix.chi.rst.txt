@@ -1,6 +1,0 @@
-treams.TMatrix.chi
-==================
-
-.. currentmodule:: treams
-
-.. autoproperty:: TMatrix.chi

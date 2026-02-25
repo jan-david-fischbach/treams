@@ -1,6 +1,0 @@
-treams.PhysicsArray.conjugate
-=============================
-
-.. currentmodule:: treams
-
-.. automethod:: PhysicsArray.conjugate

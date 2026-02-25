@@ -1,5 +1,0 @@
-﻿treams.cw
-=========
-
-.. automodule:: treams.cw
-   :no-members:

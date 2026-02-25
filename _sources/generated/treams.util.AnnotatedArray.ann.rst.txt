@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.ann
-==============================
-
-.. currentmodule:: treams.util
-
-.. autoproperty:: AnnotatedArray.ann

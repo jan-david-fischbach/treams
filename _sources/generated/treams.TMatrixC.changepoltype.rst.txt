@@ -1,4 +1,0 @@
-treams.TMatrixC.changepoltype
-=============================
-
-.. autoattribute:: treams.TMatrixC.changepoltype

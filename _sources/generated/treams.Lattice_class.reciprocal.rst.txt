@@ -1,6 +1,0 @@
-treams.Lattice.reciprocal
-=========================
-
-.. currentmodule:: treams
-
-.. autoproperty:: Lattice.reciprocal

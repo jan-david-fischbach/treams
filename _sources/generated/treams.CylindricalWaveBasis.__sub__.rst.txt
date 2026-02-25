@@ -1,6 +1,0 @@
-treams.CylindricalWaveBasis.\_\_sub\_\_
-=======================================
-
-.. currentmodule:: treams
-
-.. automethod:: CylindricalWaveBasis.__sub__

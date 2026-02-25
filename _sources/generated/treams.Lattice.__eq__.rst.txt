@@ -1,6 +1,0 @@
-treams.Lattice.\_\_eq\_\_
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.__eq__

@@ -1,6 +1,0 @@
-treams.Lattice.square
-=====================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.square

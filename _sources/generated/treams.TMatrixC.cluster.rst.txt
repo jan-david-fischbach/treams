@@ -1,6 +1,0 @@
-treams.TMatrixC.cluster
-=======================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.cluster

@@ -1,6 +1,0 @@
-treams.SphericalWaveBasis.\_\_eq\_\_
-====================================
-
-.. currentmodule:: treams
-
-.. automethod:: SphericalWaveBasis.__eq__

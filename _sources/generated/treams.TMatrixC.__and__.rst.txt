@@ -1,6 +1,0 @@
-treams.TMatrixC.\_\_and\_\_
-===========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.__and__

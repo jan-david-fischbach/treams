@@ -1,6 +1,0 @@
-treams.PhysicsArray.ndim
-========================
-
-.. currentmodule:: treams
-
-.. autoproperty:: PhysicsArray.ndim

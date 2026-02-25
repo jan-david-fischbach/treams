@@ -1,4 +1,0 @@
-treams.PhysicsArray.rotate
-==========================
-
-.. autoattribute:: treams.PhysicsArray.rotate

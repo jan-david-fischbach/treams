@@ -1,6 +1,0 @@
-treams.Lattice.\_\_getitem\_\_
-==============================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.__getitem__

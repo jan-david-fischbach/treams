@@ -1,6 +1,0 @@
-treams.TMatrixC.cylinder
-========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.cylinder

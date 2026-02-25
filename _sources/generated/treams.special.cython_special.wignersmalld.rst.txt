@@ -1,6 +1,0 @@
-treams.special.cython\_special.wignersmalld
-===========================================
-
-.. currentmodule:: treams.special.cython_special
-
-.. autofunction:: wignersmalld

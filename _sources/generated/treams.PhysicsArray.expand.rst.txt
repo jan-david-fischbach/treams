@@ -1,4 +1,0 @@
-treams.PhysicsArray.expand
-==========================
-
-.. autoattribute:: treams.PhysicsArray.expand

@@ -1,6 +1,0 @@
-treams.util.SequenceAsDict.update
-=================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: SequenceAsDict.update

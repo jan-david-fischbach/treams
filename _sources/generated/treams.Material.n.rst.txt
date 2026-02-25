@@ -1,6 +1,0 @@
-treams.Material.n
-=================
-
-.. currentmodule:: treams
-
-.. autoproperty:: Material.n

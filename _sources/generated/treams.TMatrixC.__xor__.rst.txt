@@ -1,6 +1,0 @@
-treams.TMatrixC.\_\_xor\_\_
-===========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.__xor__

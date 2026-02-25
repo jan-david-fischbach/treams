@@ -1,4 +1,0 @@
-treams.SMatrix.changepoltype
-============================
-
-.. autoattribute:: treams.SMatrix.changepoltype

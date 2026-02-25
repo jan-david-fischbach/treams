@@ -1,6 +1,0 @@
-treams.TMatrixC.\_\_divmod\_\_
-==============================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.__divmod__

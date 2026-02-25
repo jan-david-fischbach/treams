@@ -1,6 +1,0 @@
-treams.CylindricalWaveBasis.isdisjoint
-======================================
-
-.. currentmodule:: treams
-
-.. automethod:: CylindricalWaveBasis.isdisjoint

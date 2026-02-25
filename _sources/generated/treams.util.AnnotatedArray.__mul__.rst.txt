@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.\_\_mul\_\_
-======================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotatedArray.__mul__

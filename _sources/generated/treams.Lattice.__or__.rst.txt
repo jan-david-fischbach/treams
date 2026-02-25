@@ -1,6 +1,0 @@
-treams.Lattice.\_\_or\_\_
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.__or__

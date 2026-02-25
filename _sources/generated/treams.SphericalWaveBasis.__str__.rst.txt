@@ -1,6 +1,0 @@
-treams.SphericalWaveBasis.\_\_str\_\_
-=====================================
-
-.. currentmodule:: treams
-
-.. automethod:: SphericalWaveBasis.__str__

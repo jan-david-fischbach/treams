@@ -1,6 +1,0 @@
-treams.PhysicsArray.shape
-=========================
-
-.. currentmodule:: treams
-
-.. autoproperty:: PhysicsArray.shape

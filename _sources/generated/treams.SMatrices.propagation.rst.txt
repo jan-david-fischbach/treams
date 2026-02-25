@@ -1,6 +1,0 @@
-treams.SMatrices.propagation
-============================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrices.propagation

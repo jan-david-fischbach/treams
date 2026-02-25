@@ -1,6 +1,0 @@
-treams.Lattice.isdisjoint
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.isdisjoint

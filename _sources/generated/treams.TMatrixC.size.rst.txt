@@ -1,6 +1,0 @@
-treams.TMatrixC.size
-====================
-
-.. currentmodule:: treams
-
-.. autoproperty:: TMatrixC.size

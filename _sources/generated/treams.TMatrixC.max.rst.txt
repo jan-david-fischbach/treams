@@ -1,6 +1,0 @@
-treams.TMatrixC.max
-===================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.max

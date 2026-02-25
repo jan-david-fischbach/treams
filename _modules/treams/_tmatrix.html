@@ -1,0 +1,1528 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>treams._tmatrix &#8212; Treams</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/treams/_tmatrix';</script>
+    <link rel="canonical" href="https://tfp-photonics.github.io/treams/_modules/treams/_tmatrix.html" />
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Treams</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Welcome to treams’ documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory and Usage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro.html">Gallery</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../params.html">Basis sets and other core parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physicsarray.html">Physics-aware arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tmatrix.html">T-Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tmatrixc.html">Cylindrical T-matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smatrix.html">S-Matrices for plane waves</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../notebooks.html">Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/array_spheres.html">Array of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/array_spheres_tmatrixc.html">Array of Spheres to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/band_structure.html">Bandstructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/chain.html">Field Evaluations in Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/chain_tmatrixc.html">Chain to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cluster.html">Cluster TMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cluster_tmatrixc.html">Cluster TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/crystal.html">Photonic Crystal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/crystal_tmatrixc.html">Photonic Crystal TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cylinder_tmatrixc.html">Infinite Cylinder TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/grating_tmatrixc.html">Grating from TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/grid.html">Grid of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/slab.html">Slab via SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/sphere.html">Single Sphere</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theory.html">Theory</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../treams.html">Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.CylindricalWaveBasis.html">treams.CylindricalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PlaneWaveBasisByUnitVector.html">treams.PlaneWaveBasisByUnitVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PlaneWaveBasisByComp.html">treams.PlaneWaveBasisByComp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SphericalWaveBasis.html">treams.SphericalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PhysicsArray.html">treams.PhysicsArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SMatrix.html">treams.SMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SMatrices.html">treams.SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.TMatrix.html">treams.TMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.TMatrixC.html">treams.TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.Lattice_class.html">treams.Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.Material.html">treams.Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.bfield.html">treams.bfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.changepoltype.html">treams.changepoltype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.chirality_density.html">treams.chirality_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.dfield.html">treams.dfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.efield.html">treams.efield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.expand.html">treams.expand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.expandlattice.html">treams.expandlattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.hfield.html">treams.hfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.permute.html">treams.permute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.plane_wave.html">treams.plane_wave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.rotate.html">treams.rotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.translate.html">treams.translate</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.sw.html">treams.sw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.periodic_to_cw.html">treams.sw.periodic_to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.periodic_to_pw.html">treams.sw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.rotate.html">treams.sw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.translate.html">treams.sw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.translate_periodic.html">treams.sw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.cw.html">treams.cw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.periodic_to_pw.html">treams.cw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.rotate.html">treams.cw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.to_sw.html">treams.cw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.translate.html">treams.cw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.translate_periodic.html">treams.cw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.pw.html">treams.pw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.to_cw.html">treams.pw.to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.to_sw.html">treams.pw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.translate.html">treams.pw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.permute_xyz.html">treams.pw.permute_xyz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.io.html">treams.io</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.coeffs.html">treams.coeffs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.mie.html">treams.coeffs.mie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.mie_cyl.html">treams.coeffs.mie_cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.fresnel.html">treams.coeffs.fresnel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.misc.html">treams.misc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.basischange.html">treams.misc.basischange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin1d.html">treams.misc.firstbrillouin1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin2d.html">treams.misc.firstbrillouin2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin3d.html">treams.misc.firstbrillouin3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.pickmodes.html">treams.misc.pickmodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.refractive_index.html">treams.misc.refractive_index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.wave_vec_z.html">treams.misc.wave_vec_z</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.config.html">treams.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.util.html">treams.util</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.lattice.html">treams.lattice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw1d.html">treams.lattice.lsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw1d_shift.html">treams.lattice.lsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw2d.html">treams.lattice.lsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw1d.html">treams.lattice.lsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw1d_shift.html">treams.lattice.lsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw2d.html">treams.lattice.lsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw2d_shift.html">treams.lattice.lsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw3d.html">treams.lattice.lsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw1d.html">treams.lattice.dsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw1d_shift.html">treams.lattice.dsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw2d.html">treams.lattice.dsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw1d.html">treams.lattice.dsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw1d_shift.html">treams.lattice.dsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw2d.html">treams.lattice.dsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw2d_shift.html">treams.lattice.dsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw3d.html">treams.lattice.dsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.area.html">treams.lattice.area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cube.html">treams.lattice.cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cubeedge.html">treams.lattice.cubeedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.diffr_orders_circle.html">treams.lattice.diffr_orders_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.reciprocal.html">treams.lattice.reciprocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.volume.html">treams.lattice.volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cython_lattice.html">treams.lattice.cython_lattice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.special.html">treams.special</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.hankel1_d.html">treams.special.hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.hankel2_d.html">treams.special.hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.jv_d.html">treams.special.jv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.yv_d.html">treams.special.yv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel1.html">treams.special.spherical_hankel1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel2.html">treams.special.spherical_hankel2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel1_d.html">treams.special.spherical_hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel2_d.html">treams.special.spherical_hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_jn_d.html">treams.special.spherical_jn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_yn_d.html">treams.special.spherical_yn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph_harm.html">treams.special.sph_harm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.lpmv.html">treams.special.lpmv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.incgamma.html">treams.special.incgamma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.intkambe.html">treams.special.intkambe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wignersmalld.html">treams.special.wignersmalld</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wignerd.html">treams.special.wignerd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wigner3j.html">treams.special.wigner3j</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.pi_fun.html">treams.special.pi_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tau_fun.html">treams.special.tau_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_X.html">treams.special.vsh_X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_Y.html">treams.special.vsh_Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_Z.html">treams.special.vsh_Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_M.html">treams.special.vsw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_N.html">treams.special.vsw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_A.html">treams.special.vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rM.html">treams.special.vsw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rN.html">treams.special.vsw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rA.html">treams.special.vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_A.html">treams.special.tl_vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_B.html">treams.special.tl_vsw_B</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_rA.html">treams.special.tl_vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_rB.html">treams.special.tl_vsw_rB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_M.html">treams.special.vcw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_N.html">treams.special.vcw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_A.html">treams.special.vcw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rM.html">treams.special.vcw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rN.html">treams.special.vcw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rA.html">treams.special.vcw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vcw.html">treams.special.tl_vcw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vcw_r.html">treams.special.tl_vcw_r</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_M.html">treams.special.vpw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_N.html">treams.special.vpw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_A.html">treams.special.vpw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2cyl.html">treams.special.car2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2sph.html">treams.special.car2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cyl2car.html">treams.special.cyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cyl2sph.html">treams.special.cyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph2car.html">treams.special.sph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph2cyl.html">treams.special.sph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2cyl.html">treams.special.vcar2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2sph.html">treams.special.vcar2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcyl2car.html">treams.special.vcyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcyl2sph.html">treams.special.vcyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsph2car.html">treams.special.vsph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsph2cyl.html">treams.special.vsph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2pol.html">treams.special.car2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.pol2car.html">treams.special.pol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2pol.html">treams.special.vcar2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpol2car.html">treams.special.vpol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cython_special.html">treams.special.cython_special</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">Development and contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams/issues/new?title=Issue%20on%20page%20%2F_modules/treams/_tmatrix.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for treams._tmatrix</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">treams._operators</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">treams.special</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">CylindricalWaveBasis</span> <span class="k">as</span> <span class="n">CWB</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">PhysicsArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlaneWaveBasisByComp</span> <span class="k">as</span> <span class="n">PWBC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlaneWaveBasisByUnitVector</span> <span class="k">as</span> <span class="n">PWBUV</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._core</span><span class="w"> </span><span class="kn">import</span> <span class="n">SphericalWaveBasis</span> <span class="k">as</span> <span class="n">SWB</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams._material</span><span class="w"> </span><span class="kn">import</span> <span class="n">Material</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams.coeffs</span><span class="w"> </span><span class="kn">import</span> <span class="n">mie</span><span class="p">,</span> <span class="n">mie_cyl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnnotationError</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_Interaction</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">objtype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="n">obj</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span> <span class="o">=</span> <span class="n">objtype</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">basis</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">@</span> <span class="n">op</span><span class="o">.</span><span class="n">Expand</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="s2">&quot;singular&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">inv</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_LatticeInteraction</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">objtype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="n">obj</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_objtype</span> <span class="o">=</span> <span class="n">objtype</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">kpar</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">@</span> <span class="n">op</span><span class="o">.</span><span class="n">ExpandLattice</span><span class="p">(</span>
+            <span class="n">lattice</span><span class="o">=</span><span class="n">lattice</span><span class="p">,</span> <span class="n">kpar</span><span class="o">=</span><span class="n">kpar</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="n">eta</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">kpar</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">kpar</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="n">eta</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="TMatrix">
+<a class="viewcode-back" href="../../generated/treams.TMatrix.html#treams.TMatrix">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TMatrix</span><span class="p">(</span><span class="n">PhysicsArray</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;T-matrix with a spherical basis.</span>
+
+<span class="sd">    The T-matrix is square relating incident (regular) fields</span>
+<span class="sd">    :func:`treams.special.vsw_rA` (helical polarizations) or</span>
+<span class="sd">    :func:`treams.special.vsw_rN` and :func:`treams.special.vsw_rM` (parity</span>
+<span class="sd">    polarizations) to the corresponding scattered fields :func:`treams.special.vsw_A` or</span>
+<span class="sd">    :func:`treams.special.vsw_N` and :func:`treams.special.vsw_M`. The modes themselves</span>
+<span class="sd">    are defined in :attr:`basis`, the polarization type in :attr:`poltype`. Also, the</span>
+<span class="sd">    wave number :attr:`k0` and, if not vacuum, the material :attr:`material` are</span>
+<span class="sd">    specified.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        arr (float or complex, array-like): T-matrix itself.</span>
+<span class="sd">        k0 (float): Wave number in vacuum.</span>
+<span class="sd">        basis (SphericalWaveBasis, optional): Basis definition.</span>
+<span class="sd">        material (Material, optional): Embedding material, defaults to vacuum.</span>
+<span class="sd">        poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+<span class="sd">        lattice (Lattice, optional): Lattice definition. If specified the T-Matrix is</span>
+<span class="sd">            assumed to be periodically repeated in the defined lattice.</span>
+<span class="sd">        kpar (list, optional): Phase factor for the periodic T-Matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">interaction</span> <span class="o">=</span> <span class="n">_Interaction</span><span class="p">()</span>
+    <span class="n">latticeinteraction</span> <span class="o">=</span> <span class="n">_LatticeInteraction</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fill in default values or raise errors for missing attributes.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_check</span><span class="p">()</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid shape: &#39;</span><span class="si">{</span><span class="n">shape</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid k0&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;parity&quot;</span><span class="p">,</span> <span class="s2">&quot;helicity&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid poltype&quot;</span><span class="p">)</span>
+        <span class="n">modetype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span>
+        <span class="k">if</span> <span class="n">modetype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="p">(</span>
+            <span class="n">modetype</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;singular&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">modetype</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;regular&quot;</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;singular&quot;</span><span class="p">,</span> <span class="s2">&quot;regular&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid modetype&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="n">SWB</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">SWB</span><span class="o">.</span><span class="n">defaultlmax</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="n">Material</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Wave numbers (in medium).</span>
+
+<span class="sd">        The wave numbers for both polarizations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">ks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sphere</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">radii</span><span class="p">,</span> <span class="n">materials</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;T-Matrix of a (multi-layered) sphere.</span>
+
+<span class="sd">        Construct the T-matrix of the given order and material for a sphere. The object</span>
+<span class="sd">        can also consist of multiple concentric spherical shells with an arbitrary</span>
+<span class="sd">        number of layers. The calculation is always done in helicity basis.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            lmax (int): Positive integer for the maximum degree of the T-matrix.</span>
+<span class="sd">            k0 (float): Wave number in vacuum.</span>
+<span class="sd">            radii (float or array): Radii from inside to outside of the sphere. For a</span>
+<span class="sd">                simple sphere the radius can be given as a single number, for a multi-</span>
+<span class="sd">                layered sphere it is a list of increasing radii for all shells.</span>
+<span class="sd">            material (list[Material]): The material parameters from the inside to the</span>
+<span class="sd">                outside. The last material in the list specifies the embedding medium.</span>
+<span class="sd">            poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            TMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+        <span class="n">materials</span> <span class="o">=</span> <span class="p">[</span><span class="n">Material</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span><span class="p">]</span>
+        <span class="n">radii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">radii</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">materials</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;incompatible lengths of radii and materials&quot;</span><span class="p">)</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="n">SWB</span><span class="o">.</span><span class="n">defaultdim</span><span class="p">(</span><span class="n">lmax</span><span class="p">)</span>
+        <span class="n">tmat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># noqa: E741</span>
+            <span class="n">miecoeffs</span> <span class="o">=</span> <span class="n">mie</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">k0</span> <span class="o">*</span> <span class="n">radii</span><span class="p">,</span> <span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">materials</span><span class="p">))</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">SWB</span><span class="o">.</span><span class="n">defaultdim</span><span class="p">(</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">tmat</span><span class="p">[</span>
+                    <span class="n">pos</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="p">:</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="p">:</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
+                <span class="p">]</span> <span class="o">=</span> <span class="n">miecoeffs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">tmat</span><span class="p">,</span>
+            <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+            <span class="n">basis</span><span class="o">=</span><span class="n">SWB</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">lmax</span><span class="p">),</span>
+            <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">poltype</span><span class="o">=</span><span class="s2">&quot;helicity&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">changepoltype</span><span class="p">(</span><span class="n">poltype</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cluster</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tmats</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Block-diagonal T-matrix of multiple objects.</span>
+
+<span class="sd">        Construct the initial block-diagonal T-matrix for a cluster of objects. The</span>
+<span class="sd">        T-matrices in the list are placed together into a block-diagonal matrix and the</span>
+<span class="sd">        complete (local) basis is defined based on the individual T-matrices and their</span>
+<span class="sd">        bases together with the defined positions. In mathematical terms the matrix</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \begin{pmatrix}</span>
+<span class="sd">                T_0 &amp; 0 &amp; \dots &amp; 0 \\</span>
+<span class="sd">                0 &amp; T_1 &amp; \ddots &amp; \vdots \\</span>
+<span class="sd">                \vdots &amp; \ddots &amp; \ddots &amp; 0 \\</span>
+<span class="sd">                0 &amp; \dots &amp; 0 &amp; T_{N-1} \\</span>
+<span class="sd">            \end{pmatrix}</span>
+
+<span class="sd">        is created from the list of T-matrices :math:`(T_0, \dots, T_{N-1})`. Only</span>
+<span class="sd">        T-matrices of the same wave number, embedding material, and polarization type</span>
+<span class="sd">        can be combined.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            tmats (Sequence): List of T-matrices.</span>
+<span class="sd">            positions (array): The positions of all individual objects in the cluster.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            TMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">tm</span> <span class="ow">in</span> <span class="n">tmats</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">tm</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">isglobal</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;global basis required&quot;</span><span class="p">)</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmats</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;specified more positions than T-matrices&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmats</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">tmats</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39; T-matrices &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;but only &#39;</span><span class="si">{</span><span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; positions given&quot;</span>
+            <span class="p">)</span>
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">tmats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+        <span class="n">k0</span> <span class="o">=</span> <span class="n">tmats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">k0</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">tmats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">poltype</span>
+        <span class="n">modes</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">pidx</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tmat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">tmat</span> <span class="ow">in</span> <span class="n">tmats</span><span class="p">)</span>
+        <span class="n">tres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">),</span> <span class="nb">complex</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">tm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tmats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">tm</span><span class="o">.</span><span class="n">material</span> <span class="o">!=</span> <span class="n">mat</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;incompatible materials: &#39;</span><span class="si">{</span><span class="n">mat</span><span class="si">}</span><span class="s2">&#39; and &#39;</span><span class="si">{</span><span class="n">tm</span><span class="o">.</span><span class="n">material</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tm</span><span class="o">.</span><span class="n">k0</span> <span class="o">!=</span> <span class="n">k0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;incompatible k0: &#39;</span><span class="si">{</span><span class="n">k0</span><span class="si">}</span><span class="s2">&#39; and &#39;</span><span class="si">{</span><span class="n">tm</span><span class="o">.</span><span class="n">k0</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tm</span><span class="o">.</span><span class="n">poltype</span> <span class="o">!=</span> <span class="n">poltype</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;incompatible modetypes: &#39;</span><span class="si">{</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;, &#39;</span><span class="si">{</span><span class="n">tm</span><span class="o">.</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">tm</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">lms</span><span class="p">):</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+            <span class="n">pidx</span> <span class="o">+=</span> <span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">dim</span>
+            <span class="n">tres</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">dim</span><span class="p">,</span> <span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="n">dim</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="n">SWB</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">pidx</span><span class="p">,</span> <span class="o">*</span><span class="n">modes</span><span class="p">),</span> <span class="n">positions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">tres</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">mat</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">isglobal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test if a T-matrix is global.</span>
+
+<span class="sd">        A T-matrix is considered global, when its basis refers to only a single point</span>
+<span class="sd">        and it is not placed periodically in a lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">kpar</span> <span class="ow">is</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">xs_ext_avg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Rotation and polarization averaged extinction cross section.</span>
+
+<span class="sd">        The average is calculated as</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \langle \sigma_\mathrm{ext} \rangle</span>
+<span class="sd">            = -2 \pi \sum_{slm} \frac{\Re(T_{slm,slm})}{k_s^2}</span>
+
+<span class="sd">        where :math:`k_s` is the wave number in the embedding medium for the</span>
+<span class="sd">        polarization :math:`s`. It is only implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float or complex</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">ischiral</span><span class="p">:</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span><span class="o">.</span><span class="n">real</span> <span class="o">/</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">modetype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span>
+            <span class="n">diag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span> <span class="o">=</span> <span class="n">modetype</span>
+            <span class="k">for</span> <span class="n">pol</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="n">pol</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="n">pol</span><span class="p">]</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">diag</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">real</span> <span class="o">/</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">res</span><span class="o">.</span><span class="n">imag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">real</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">xs_sca_avg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Rotation and polarization averaged scattering cross section.</span>
+
+<span class="sd">        The average is calculated as</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \langle \sigma_\mathrm{sca} \rangle</span>
+<span class="sd">            = 2 \pi \sum_{slm} \sum_{s&#39;l&#39;m&#39;}</span>
+<span class="sd">            \frac{|T_{slm,s&#39;l&#39;m&#39;}|^2}{k_s^2}</span>
+
+<span class="sd">        where :math:`k_s` is the wave number in the embedding medium for the</span>
+<span class="sd">        polarization :math:`s`. It is only implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float or complex</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">ischiral</span><span class="p">:</span>
+            <span class="n">ks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">re</span><span class="p">,</span> <span class="n">im</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">re</span> <span class="o">*</span> <span class="n">re</span> <span class="o">+</span> <span class="n">im</span> <span class="o">*</span> <span class="n">im</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">ks</span> <span class="o">*</span> <span class="n">ks</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">real</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cd</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Circular dichroism (CD).</span>
+
+<span class="sd">        The CD is calculated as</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            CD</span>
+<span class="sd">            = \frac{\langle \sigma_\mathrm{abs} \rangle_+</span>
+<span class="sd">            - \langle \sigma_\mathrm{abs} \rangle_-}</span>
+<span class="sd">            {\langle \sigma_\mathrm{abs} \rangle_+</span>
+<span class="sd">            + \langle \sigma_\mathrm{abs} \rangle_-}</span>
+
+<span class="sd">        where :math:`\langle \sigma \rangle_s` is the rotationally averaged absorption</span>
+<span class="sd">        cross section under the illumination with the polarization :math:`s`.</span>
+<span class="sd">        It is only implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float or complex</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="n">re</span><span class="p">,</span> <span class="n">im</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span>
+        <span class="n">plus</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()[</span><span class="n">sel</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">re_part</span> <span class="o">=</span> <span class="n">re</span><span class="p">[:,</span> <span class="n">sel</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">im_part</span> <span class="o">=</span> <span class="n">im</span><span class="p">[:,</span> <span class="n">sel</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">plus</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">re_part</span> <span class="o">*</span> <span class="n">re_part</span> <span class="o">+</span> <span class="n">im_part</span> <span class="o">*</span> <span class="n">im_part</span><span class="p">)</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="o">~</span><span class="n">sel</span>
+        <span class="n">minus</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()[</span><span class="n">sel</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">re_part</span> <span class="o">=</span> <span class="n">re</span><span class="p">[:,</span> <span class="n">sel</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">im_part</span> <span class="o">=</span> <span class="n">im</span><span class="p">[:,</span> <span class="n">sel</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">minus</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">re_part</span> <span class="o">*</span> <span class="n">re_part</span> <span class="o">+</span> <span class="n">im_part</span> <span class="o">*</span> <span class="n">im_part</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">((</span><span class="n">plus</span> <span class="o">-</span> <span class="n">minus</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">plus</span> <span class="o">+</span> <span class="n">minus</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">chi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Electromagnetic chirality.</span>
+
+<span class="sd">        Only implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="n">spp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">])],</span> <span class="n">compute_uv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">spm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">compute_uv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">smp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">])],</span> <span class="n">compute_uv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">smm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">compute_uv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">plus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">spp</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">spm</span><span class="p">)))</span>
+        <span class="n">minus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">smm</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">smp</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">plus</span> <span class="o">-</span> <span class="n">minus</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">db</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Duality breaking.</span>
+
+<span class="sd">        Only implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="n">tpm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">])])</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+            <span class="n">tpm</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="n">tpm</span><span class="o">.</span><span class="n">real</span>
+            <span class="o">+</span> <span class="n">tpm</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="n">tpm</span><span class="o">.</span><span class="n">imag</span>
+            <span class="o">+</span> <span class="n">tmp</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="n">tmp</span><span class="o">.</span><span class="n">real</span>
+            <span class="o">+</span> <span class="n">tmp</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="n">tmp</span><span class="o">.</span><span class="n">imag</span>
+        <span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">xs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">illu</span><span class="p">,</span> <span class="n">flux</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Scattering and extinction cross section.</span>
+
+<span class="sd">        Possible for all T-matrices (global and local) in non-absorbing embedding. The</span>
+<span class="sd">        values are calculated by</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \sigma_\mathrm{sca}</span>
+<span class="sd">            = \frac{1}{2 I}</span>
+<span class="sd">            a_{slm}^\ast T_{s&#39;l&#39;m&#39;,slm}^\ast k_{s&#39;}^{-2} C_{s&#39;l&#39;m&#39;,s&#39;&#39;l&#39;&#39;m&#39;&#39;}^{(1)}</span>
+<span class="sd">            T_{s&#39;&#39;l&#39;&#39;m&#39;&#39;,s&#39;&#39;&#39;l&#39;&#39;&#39;m&#39;&#39;&#39;} a_{s&#39;&#39;&#39;l&#39;&#39;&#39;m&#39;&#39;&#39;} \\</span>
+<span class="sd">            \sigma_\mathrm{ext}</span>
+<span class="sd">            = \frac{1}{2 I}</span>
+<span class="sd">            a_{slm}^\ast k_s^{-2} T_{slm,s&#39;l&#39;m&#39;} a_{s&#39;l&#39;m&#39;}</span>
+
+<span class="sd">        where :math:`a_{slm}` are the expansion coefficients of the illumination,</span>
+<span class="sd">        :math:`T` is the T-matrix, :math:`C^{(1)}` is the (regular) translation</span>
+<span class="sd">        matrix and :math:`k_s` are the wave numbers in the medium. All repeated indices</span>
+<span class="sd">        are summed over. The incoming flux is :math:`I`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            illu (complex, array): Illumination coefficients</span>
+<span class="sd">            flux (optional): Ingoing flux corresponding to the illumination. Used for</span>
+<span class="sd">                the result&#39;s normalization. The flux is given in units of</span>
+<span class="sd">                :math:`\frac{\text{V}^2}{{l^2}} \frac{1}{Z_0 Z}` where :math:`l` is the</span>
+<span class="sd">                unit of length used in the wave number (and positions). A plane wave</span>
+<span class="sd">                has the flux `0.5` in this normalization, which is used as default.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[float]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">illu</span> <span class="o">=</span> <span class="n">PhysicsArray</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+        <span class="n">illu_basis</span> <span class="o">=</span> <span class="n">illu</span><span class="o">.</span><span class="n">basis</span>
+        <span class="n">illu_basis</span> <span class="o">=</span> <span class="n">illu_basis</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">illu_basis</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="k">else</span> <span class="n">illu_basis</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">illu_basis</span><span class="p">,</span> <span class="n">SWB</span><span class="p">):</span>
+            <span class="n">illu</span> <span class="o">=</span> <span class="n">illu</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span> <span class="o">@</span> <span class="n">illu</span>
+        <span class="n">p_invksq</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">],</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">illu</span><span class="o">.</span><span class="n">modetype</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">p_invksq</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">basis</span><span class="p">))</span> <span class="o">/</span> <span class="n">flux</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">illu</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">p_invksq</span><span class="p">)</span> <span class="o">/</span> <span class="n">flux</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">valid_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">radii</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Points on the grid where the expansion is valid.</span>
+
+<span class="sd">        The expansion of the electromagnetic field is valid outside of the</span>
+<span class="sd">        circumscribing spheres of each object. From a given set of coordinates mark</span>
+<span class="sd">        those that are outside of the given radii.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            grid (array-like): Points to assess. The last dimension needs length three</span>
+<span class="sd">                and corresponds to the Cartesian coordinates.</span>
+<span class="sd">            radii (Sequence[float]): Radii of the circumscribing spheres. Each radius</span>
+<span class="sd">                corresponds to a position of the basis.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;invalid grid&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">positions</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;invalid length of &#39;radii&#39;&quot;</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">radii</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">positions</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">&amp;=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">grid</span> <span class="o">-</span> <span class="n">p</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">SWB</span><span class="p">):</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">key</span><span class="p">])</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">key</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="TMatrixC">
+<a class="viewcode-back" href="../../generated/treams.TMatrixC.html#treams.TMatrixC">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TMatrixC</span><span class="p">(</span><span class="n">PhysicsArray</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;T-matrix with a cylindrical basis.</span>
+
+<span class="sd">    The T-matrix is square relating incident (regular) fields</span>
+<span class="sd">    :func:`treams.special.vcw_rA` (helical polarizations) or</span>
+<span class="sd">    :func:`treams.special.vcw_rN` and :func:`treams.special.vcw_rM` (parity</span>
+<span class="sd">    polarizations) to the corresponding scattered fields :func:`treams.special.vcw_A` or</span>
+<span class="sd">    :func:`treams.special.vcw_N` and :func:`treams.special.vcw_M`. The modes themselves</span>
+<span class="sd">    are defined in :attr:`basis`, the polarization type in :attr:`poltype`. Also, the</span>
+<span class="sd">    wave number :attr:`k0` and, if not vacuum, the material :attr:`material` are</span>
+<span class="sd">    specified.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        arr (float or complex, array-like): T-matrix itself.</span>
+<span class="sd">        k0 (float): Wave number in vacuum.</span>
+<span class="sd">        basis (SphericalWaveBasis, optional): Basis definition.</span>
+<span class="sd">        material (Material, optional): Embedding material, defaults to vacuum.</span>
+<span class="sd">        poltype (str, optional): Polarization type (:ref:`params:Polarizations`).</span>
+<span class="sd">        lattice (Lattice, optional): Lattice definition. If specified the T-Matrix is</span>
+<span class="sd">            assumed to be periodically repeated in the defined lattice.</span>
+<span class="sd">        kpar (list, optional): Phase factor for the periodic T-Matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">interaction</span> <span class="o">=</span> <span class="n">_Interaction</span><span class="p">()</span>
+    <span class="n">latticeinteraction</span> <span class="o">=</span> <span class="n">_LatticeInteraction</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fill in default values or raise errors for missing attributes.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_check</span><span class="p">()</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid shape: &#39;</span><span class="si">{</span><span class="n">shape</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid k0&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">poltype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;parity&quot;</span><span class="p">,</span> <span class="s2">&quot;helicity&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid poltype&quot;</span><span class="p">)</span>
+        <span class="n">modetype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span>
+        <span class="k">if</span> <span class="n">modetype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="p">(</span>
+            <span class="n">modetype</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;singular&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">modetype</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;regular&quot;</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;singular&quot;</span><span class="p">,</span> <span class="s2">&quot;regular&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">AnnotationError</span><span class="p">(</span><span class="s2">&quot;invalid modetype&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="n">CWB</span><span class="o">.</span><span class="n">default</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="n">CWB</span><span class="o">.</span><span class="n">defaultmmax</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="n">Material</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Wave numbers (in medium).</span>
+
+<span class="sd">        The wave numbers for both polarizations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">ks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">krhos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Radial part of the wave.</span>
+
+<span class="sd">        Calculate :math:`\sqrt{k^2 - k_z^2}`, where :math:`k` is the wave number in the</span>
+<span class="sd">        medium for each illumination</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Sequence[complex]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">krhos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">kz</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cylinder</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">kzs</span><span class="p">,</span> <span class="n">mmax</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">radii</span><span class="p">,</span> <span class="n">materials</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;T-Matrix of a (multi-layered) cylinder.</span>
+
+<span class="sd">        Construct the T-matrix of the given order and material for an infinitely</span>
+<span class="sd">        extended cylinder. The object can also consist of multiple concentric</span>
+<span class="sd">        cylindrical shells with an arbitrary number of layers. The calculation is always</span>
+<span class="sd">        done in helicity basis.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            kzs (float, array_like): Z component of the cylindrical wave.</span>
+<span class="sd">            mmax (int): Positive integer for the maximum order of the T-matrix.</span>
+<span class="sd">            k0 (float): Wave number in vacuum.</span>
+<span class="sd">            radii (float or array): Radii from inside to outside of the cylinder. For a</span>
+<span class="sd">                simple cylinder the radius can be given as a single number, for a multi-</span>
+<span class="sd">                layered cylinder it is a list of increasing radii for all shells.</span>
+<span class="sd">            material (list[Material]): The material parameters from the inside to the</span>
+<span class="sd">                outside. The last material in the list specifies the embedding medium.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            T-Matrix object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">materials</span> <span class="o">=</span> <span class="p">[</span><span class="n">Material</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">materials</span><span class="p">]</span>
+        <span class="n">kzs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">kzs</span><span class="p">)</span>
+        <span class="n">radii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">radii</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">materials</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;incompatible lengths of radii and materials&quot;</span><span class="p">)</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="n">CWB</span><span class="o">.</span><span class="n">defaultdim</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kzs</span><span class="p">),</span> <span class="n">mmax</span><span class="p">)</span>
+        <span class="n">tmat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">)</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">kz</span> <span class="ow">in</span> <span class="n">kzs</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">mmax</span><span class="p">,</span> <span class="n">mmax</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">miecoeffs</span> <span class="o">=</span> <span class="n">mie_cyl</span><span class="p">(</span><span class="n">kz</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">radii</span><span class="p">,</span> <span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">materials</span><span class="p">))</span>
+                <span class="n">tmat</span><span class="p">[</span><span class="n">idx</span> <span class="p">:</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">idx</span> <span class="p">:</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">miecoeffs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">idx</span> <span class="o">+=</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">tmat</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">CWB</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">kzs</span><span class="p">,</span> <span class="n">mmax</span><span class="p">),</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cluster</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tmats</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Block-diagonal T-matrix of multiple objects.</span>
+
+<span class="sd">        Construct the initial block-diagonal T-matrix for a cluster of objects. The</span>
+<span class="sd">        T-matrices in the list are placed together into a block-diagonal matrix and the</span>
+<span class="sd">        complete (local) basis is defined based on the individual T-matrices and their</span>
+<span class="sd">        bases together with the defined positions. In mathematical terms the matrix</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \begin{pmatrix}</span>
+<span class="sd">                T_0 &amp; 0 &amp; \dots &amp; 0 \\</span>
+<span class="sd">                0 &amp; T_1 &amp; \ddots &amp; \vdots \\</span>
+<span class="sd">                \vdots &amp; \ddots &amp; \ddots &amp; 0 \\</span>
+<span class="sd">                0 &amp; \dots &amp; 0 &amp; T_{N-1} \\</span>
+<span class="sd">            \end{pmatrix}</span>
+
+<span class="sd">        is created from the list of T-matrices :math:`(T_0, \dots, T_{N-1})`. Only</span>
+<span class="sd">        T-matrices of the same wave number, embedding material, and polarization type</span>
+<span class="sd">        can be combined.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            tmats (Sequence): List of T-matrices.</span>
+<span class="sd">            positions (array): The positions of all individual objects in the cluster.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            TMatrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">tm</span> <span class="ow">in</span> <span class="n">tmats</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">tm</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">isglobal</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;global basis required&quot;</span><span class="p">)</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmats</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;specified more positions than T-matrices&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmats</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">tmats</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39; T-matrices &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;but only &#39;</span><span class="si">{</span><span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; positions given&quot;</span>
+            <span class="p">)</span>
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">tmats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">material</span>
+        <span class="n">k0</span> <span class="o">=</span> <span class="n">tmats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">k0</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">tmats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">poltype</span>
+        <span class="n">modes</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">pidx</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tmat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">tmat</span> <span class="ow">in</span> <span class="n">tmats</span><span class="p">)</span>
+        <span class="n">tres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">),</span> <span class="nb">complex</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">tm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tmats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">tm</span><span class="o">.</span><span class="n">material</span> <span class="o">!=</span> <span class="n">mat</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;incompatible materials: &#39;</span><span class="si">{</span><span class="n">mat</span><span class="si">}</span><span class="s2">&#39; and &#39;</span><span class="si">{</span><span class="n">tm</span><span class="o">.</span><span class="n">material</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tm</span><span class="o">.</span><span class="n">k0</span> <span class="o">!=</span> <span class="n">k0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;incompatible k0: &#39;</span><span class="si">{</span><span class="n">k0</span><span class="si">}</span><span class="s2">&#39; and &#39;</span><span class="si">{</span><span class="n">tm</span><span class="o">.</span><span class="n">k0</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tm</span><span class="o">.</span><span class="n">poltype</span> <span class="o">!=</span> <span class="n">poltype</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;incompatible modetypes: &#39;</span><span class="si">{</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;, &#39;</span><span class="si">{</span><span class="n">tm</span><span class="o">.</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">modes</span><span class="p">,</span> <span class="n">tm</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">zms</span><span class="p">):</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+            <span class="n">pidx</span> <span class="o">+=</span> <span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">dim</span>
+            <span class="n">tres</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">dim</span><span class="p">,</span> <span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="n">dim</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="n">CWB</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">pidx</span><span class="p">,</span> <span class="o">*</span><span class="n">modes</span><span class="p">),</span> <span class="n">positions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">tres</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">mat</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_array</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tm</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;1d array of spherical T-matrices.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">tm</span> <span class="o">@</span> <span class="n">op</span><span class="o">.</span><span class="n">Expand</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span><span class="o">.</span><span class="n">inv</span><span class="p">)</span><span class="o">.</span><span class="n">expandlattice</span><span class="p">(</span><span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="n">eta</span><span class="p">),</span>
+            <span class="n">lattice</span><span class="o">=</span><span class="n">tm</span><span class="o">.</span><span class="n">lattice</span><span class="p">,</span>
+            <span class="n">kpar</span><span class="o">=</span><span class="n">tm</span><span class="o">.</span><span class="n">kpar</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">xw_ext_avg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Rotation and polarization averaged extinction cross width.</span>
+
+<span class="sd">        The average is calculated as</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \langle \lambda_\mathrm{ext} \rangle</span>
+<span class="sd">            = -\frac{2 \pi}{n_{k_z}} \sum_{sk_zm} \frac{\Re(T_{sk_zm,sk_zm})}{k_s}</span>
+
+<span class="sd">        where :math:`k_s` is the wave number in the embedding medium for the</span>
+<span class="sd">        polarization :math:`s` and :math:`n_{k_z}` is the number of wave components</span>
+<span class="sd">        :math:`k_z` included in the T-matrix. The average is taken over all given</span>
+<span class="sd">        z-components of the wave vector and rotations around the z-axis. It is only</span>
+<span class="sd">        implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float or complex</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">nk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">kz</span><span class="p">)</span><span class="o">.</span><span class="n">size</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">ischiral</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">nk</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">modetype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span>
+            <span class="n">diag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">modetype</span> <span class="o">=</span> <span class="n">modetype</span>
+            <span class="k">for</span> <span class="n">pol</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span> <span class="o">==</span> <span class="n">pol</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">diag</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="n">pol</span><span class="p">]</span> <span class="o">*</span> <span class="n">nk</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">res</span><span class="o">.</span><span class="n">imag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">real</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">xw_sca_avg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Rotation and polarization averaged scattering cross width.</span>
+
+<span class="sd">        The average is calculated as</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \langle \lambda_\mathrm{sca} \rangle</span>
+<span class="sd">            = \frac{2 \pi}{n_{k_z}} \sum_{sk_zm} \sum_{s&#39;{k_z}&#39;m&#39;}</span>
+<span class="sd">            \frac{|T_{sk_zm,s&#39;{k_z}&#39;m&#39;}|^2}{k_s}</span>
+
+<span class="sd">        where :math:`k_s` is the wave number in the embedding medium for the</span>
+<span class="sd">        polarization :math:`s`. and :math:`n_{k_z}` is the number of wave components</span>
+<span class="sd">        :math:`k_z` included in the T-matrix. The average is taken over all given</span>
+<span class="sd">        z-components of the wave vector and rotations around the z-axis. It is only</span>
+<span class="sd">        implemented for global T-matrices.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float or complex</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">ischiral</span><span class="p">:</span>
+            <span class="n">ks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">re</span><span class="p">,</span> <span class="n">im</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span>
+        <span class="n">nk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">kz</span><span class="p">)</span><span class="o">.</span><span class="n">size</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">re</span> <span class="o">*</span> <span class="n">re</span> <span class="o">+</span> <span class="n">im</span> <span class="o">*</span> <span class="n">im</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">ks</span> <span class="o">*</span> <span class="n">nk</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">real</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">isglobal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test if a T-matrix is global.</span>
+
+<span class="sd">        A T-matrix is considered global, when its basis refers to only a single point</span>
+<span class="sd">        and it is not placed periodically in a lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">isglobal</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">kpar</span> <span class="ow">is</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">xw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">illu</span><span class="p">,</span> <span class="n">flux</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Scattering and extinction cross width.</span>
+
+<span class="sd">        Possible for all T-matrices (global and local) in non-absorbing embedding. The</span>
+<span class="sd">        values are calculated by</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \lambda_\mathrm{sca}</span>
+<span class="sd">            = \frac{1}{2 I}</span>
+<span class="sd">            a_{sk_zm}^\ast T_{s&#39;{k_z}&#39;m&#39;,sk_zm}^\ast k_{s&#39;}^{-2}</span>
+<span class="sd">            C_{s&#39;l&#39;m&#39;,s&#39;&#39;l&#39;&#39;m&#39;&#39;}^{(1)}</span>
+<span class="sd">            T_{s&#39;&#39;l&#39;&#39;m&#39;&#39;,s&#39;&#39;&#39;l&#39;&#39;&#39;m&#39;&#39;&#39;} a_{s&#39;&#39;&#39;l&#39;&#39;&#39;m&#39;&#39;&#39;} \\</span>
+<span class="sd">            \sigma_\mathrm{ext}</span>
+<span class="sd">            = \frac{1}{2 I}</span>
+<span class="sd">            a_{slm}^\ast k_s^{-2} T_{slm,s&#39;l&#39;m&#39;} a_{s&#39;l&#39;m&#39;}</span>
+
+<span class="sd">        where :math:`a_{slm}` are the expansion coefficients of the illumination,</span>
+<span class="sd">        :math:`T` is the T-matrix, :math:`C^{(1)}` is the (regular) translation</span>
+<span class="sd">        matrix and :math:`k_s` are the wave numbers in the medium. All repeated indices</span>
+<span class="sd">        are summed over. The incoming flux is :math:`I`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            illu (complex, array): Illumination coefficients</span>
+<span class="sd">            flux (optional): Ingoing flux corresponding to the illumination. Used for</span>
+<span class="sd">                the result&#39;s normalization. The flux is given in units of</span>
+<span class="sd">                :math:`\frac{\text{V}^2}{{l^2}} \frac{1}{Z_0 Z}` where :math:`l` is the</span>
+<span class="sd">                unit of length used in the wave number (and positions). A plane wave</span>
+<span class="sd">                has the flux `0.5` in this normalization, which is used as default.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple[float]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">isreal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">illu</span> <span class="o">=</span> <span class="n">PhysicsArray</span><span class="p">(</span><span class="n">illu</span><span class="p">)</span>
+        <span class="n">illu_basis</span> <span class="o">=</span> <span class="n">illu</span><span class="o">.</span><span class="n">basis</span>
+        <span class="n">illu_basis</span> <span class="o">=</span> <span class="n">illu_basis</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">illu_basis</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="k">else</span> <span class="n">illu_basis</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">illu_basis</span><span class="p">,</span> <span class="n">CWB</span><span class="p">):</span>
+            <span class="n">illu</span> <span class="o">=</span> <span class="n">illu</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span> <span class="o">@</span> <span class="n">illu</span>
+        <span class="n">p_invk</span> <span class="o">=</span> <span class="n">p</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ks</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">pol</span><span class="p">]</span>
+        <span class="k">del</span> <span class="n">illu</span><span class="o">.</span><span class="n">modetype</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">p_invk</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">basis</span><span class="p">))</span> <span class="o">/</span> <span class="n">flux</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">illu</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">p_invk</span><span class="p">)</span> <span class="o">/</span> <span class="n">flux</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">valid_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">radii</span><span class="p">):</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;invalid grid&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">radii</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">positions</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;invalid length of &#39;radii&#39;&quot;</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">radii</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">positions</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">&amp;=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">p</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">CWB</span><span class="p">):</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">key</span><span class="p">])</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">key</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_plane_wave_partial</span><span class="p">(</span>
+    <span class="n">kpar</span><span class="p">,</span> <span class="n">pol</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="n">PWBC</span><span class="o">.</span><span class="n">default</span><span class="p">([</span><span class="n">kpar</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">pol</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">pol</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">pol</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">modetype</span> <span class="o">=</span> <span class="s2">&quot;up&quot;</span> <span class="k">if</span> <span class="n">modetype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">modetype</span>
+        <span class="k">if</span> <span class="n">modetype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid &#39;modetype&#39;: </span><span class="si">{</span><span class="n">modetype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">kvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">basis</span><span class="o">.</span><span class="n">kvecs</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="p">))</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+        <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;parity&quot;</span><span class="p">:</span>
+            <span class="n">kvec</span> <span class="o">=</span> <span class="n">kvecs</span><span class="p">[:,</span> <span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="n">kpar</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kpar</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">))]</span>
+            <span class="n">pol</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="o">-</span><span class="n">sc</span><span class="o">.</span><span class="n">vpw_M</span><span class="p">(</span><span class="o">*</span><span class="n">kvec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">@</span> <span class="n">pol</span><span class="p">,</span>
+                <span class="n">sc</span><span class="o">.</span><span class="n">vpw_N</span><span class="p">(</span><span class="o">*</span><span class="n">kvec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">@</span> <span class="n">pol</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+            <span class="n">kvec</span> <span class="o">=</span> <span class="n">kvecs</span><span class="p">[</span>
+                <span class="p">:,</span>
+                <span class="p">[</span>
+                    <span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="n">kpar</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kpar</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)),</span>
+                    <span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="n">kpar</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kpar</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)),</span>
+                <span class="p">],</span>
+            <span class="p">]</span>
+            <span class="n">pol</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">vpw_A</span><span class="p">(</span><span class="o">*</span><span class="n">kvec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">@</span> <span class="n">pol</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid &#39;poltype&#39;: </span><span class="si">{</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="n">pol</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kpar</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-14</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">basis</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">PhysicsArray</span><span class="p">(</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="n">modetype</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_plane_wave</span><span class="p">(</span>
+    <span class="n">kvec</span><span class="p">,</span> <span class="n">pol</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="n">PWBUV</span><span class="o">.</span><span class="n">default</span><span class="p">([</span><span class="n">kvec</span><span class="p">])</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">kvec</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+    <span class="n">qvec</span> <span class="o">=</span> <span class="n">kvec</span> <span class="o">/</span> <span class="n">norm</span>
+    <span class="k">if</span> <span class="n">pol</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">pol</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">pol</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="kc">None</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="p">):</span>
+            <span class="n">kvec</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="n">material</span><span class="p">)</span><span class="o">.</span><span class="n">ks</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span> <span class="o">*</span> <span class="n">qvec</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">kvec</span> <span class="o">=</span> <span class="n">qvec</span>
+        <span class="n">poltype</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">POLTYPE</span> <span class="k">if</span> <span class="n">poltype</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">poltype</span>
+        <span class="k">if</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;parity&quot;</span><span class="p">:</span>
+            <span class="n">pol</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="o">-</span><span class="n">sc</span><span class="o">.</span><span class="n">vpw_M</span><span class="p">(</span><span class="o">*</span><span class="n">kvec</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">@</span> <span class="n">pol</span><span class="p">,</span>
+                <span class="n">sc</span><span class="o">.</span><span class="n">vpw_N</span><span class="p">(</span><span class="o">*</span><span class="n">kvec</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">@</span> <span class="n">pol</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="n">poltype</span> <span class="o">==</span> <span class="s2">&quot;helicity&quot;</span><span class="p">:</span>
+            <span class="n">pol</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">vpw_A</span><span class="p">(</span><span class="o">*</span><span class="n">kvec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">@</span> <span class="n">pol</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid &#39;poltype&#39;: </span><span class="si">{</span><span class="n">poltype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="n">pol</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">qvec</span> <span class="o">-</span> <span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-14</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">basis</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">PhysicsArray</span><span class="p">(</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="n">modetype</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="plane_wave">
+<a class="viewcode-back" href="../../generated/treams.plane_wave.html#treams.plane_wave">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">plane_wave</span><span class="p">(</span>
+    <span class="n">kvec</span><span class="p">,</span> <span class="n">pol</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Array describing a plane wave.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        kvec (Sequence): Wave vector.</span>
+<span class="sd">        pol (int or Sequence): Polarization index (see</span>
+<span class="sd">            :ref:`params:Polarizations`) to have a unit amplitude wave of the</span>
+<span class="sd">            corresponding wave, two values to specify the amplitude for each</span>
+<span class="sd">            polarization, or three values in a sequence to specify the Cartesian</span>
+<span class="sd">            electric field components. In the latter case, if the electric field has</span>
+<span class="sd">            longitudinal components they are neglected.</span>
+<span class="sd">        basis (PlaneWaveBasis, optional): Basis definition.</span>
+<span class="sd">        k0 (float, optional): Wave number in vacuum.</span>
+<span class="sd">        material (Material, optional): Material definition.</span>
+<span class="sd">        modetype (str, optional): Mode type (see :ref:`params:Mode types`).</span>
+<span class="sd">        poltype (str, optional): Polarization type (see</span>
+<span class="sd">            :ref:`params:Polarizations`).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kvec</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_plane_wave_partial</span><span class="p">(</span>
+            <span class="n">kvec</span><span class="p">,</span>
+            <span class="n">pol</span><span class="p">,</span>
+            <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+            <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span>
+            <span class="n">modetype</span><span class="o">=</span><span class="n">modetype</span><span class="p">,</span>
+            <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kvec</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_plane_wave</span><span class="p">(</span>
+            <span class="n">kvec</span><span class="p">,</span>
+            <span class="n">pol</span><span class="p">,</span>
+            <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+            <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span>
+            <span class="n">modetype</span><span class="o">=</span><span class="n">modetype</span><span class="p">,</span>
+            <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid length of &#39;kvec&#39;: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">kvec</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plane_wave_angle</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">pol</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">qvec</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">plane_wave</span><span class="p">(</span><span class="n">qvec</span><span class="p">,</span> <span class="n">pol</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">spherical_wave</span><span class="p">(</span>
+    <span class="n">l</span><span class="p">,</span>  <span class="c1"># noqa: E741</span>
+    <span class="n">m</span><span class="p">,</span>
+    <span class="n">pol</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">k0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">basis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">modetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="n">SWB</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basis</span><span class="o">.</span><span class="n">isglobal</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;basis must be global&quot;</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+    <span class="n">res</span><span class="p">[</span><span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">pol</span><span class="p">))]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">PhysicsArray</span><span class="p">(</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="n">modetype</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cylindrical_wave</span><span class="p">(</span>
+    <span class="n">kz</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">pol</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">basis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">basis</span> <span class="o">=</span> <span class="n">CWB</span><span class="o">.</span><span class="n">default</span><span class="p">([</span><span class="n">kz</span><span class="p">],</span> <span class="nb">abs</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basis</span><span class="o">.</span><span class="n">isglobal</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;basis must be global&quot;</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+    <span class="n">res</span><span class="p">[</span><span class="n">basis</span><span class="o">.</span><span class="n">index</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">kz</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">pol</span><span class="p">))]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">PhysicsArray</span><span class="p">(</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="n">basis</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">material</span><span class="p">,</span> <span class="n">modetype</span><span class="o">=</span><span class="n">modetype</span><span class="p">,</span> <span class="n">poltype</span><span class="o">=</span><span class="n">poltype</span>
+    <span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dominik Beutel, Elias Herzog, Jan David Fischbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

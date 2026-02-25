@@ -1,6 +1,0 @@
-treams.TMatrixC.transpose
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.transpose

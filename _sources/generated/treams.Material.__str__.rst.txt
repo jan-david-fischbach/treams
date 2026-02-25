@@ -1,6 +1,0 @@
-treams.Material.\_\_str\_\_
-===========================
-
-.. currentmodule:: treams
-
-.. automethod:: Material.__str__

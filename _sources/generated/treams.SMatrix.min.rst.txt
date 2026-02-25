@@ -1,6 +1,0 @@
-treams.SMatrix.min
-==================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.min

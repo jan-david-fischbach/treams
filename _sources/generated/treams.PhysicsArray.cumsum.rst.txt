@@ -1,6 +1,0 @@
-treams.PhysicsArray.cumsum
-==========================
-
-.. currentmodule:: treams
-
-.. automethod:: PhysicsArray.cumsum

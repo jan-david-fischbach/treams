@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByUnitVector.count
-=======================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByUnitVector.count

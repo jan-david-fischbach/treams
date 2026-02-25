@@ -1,4 +1,0 @@
-treams.PhysicsArray.changepoltype
-=================================
-
-.. autoattribute:: treams.PhysicsArray.changepoltype

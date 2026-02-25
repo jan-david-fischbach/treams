@@ -1,6 +1,0 @@
-treams.util.AnnotationDict.pop
-==============================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationDict.pop

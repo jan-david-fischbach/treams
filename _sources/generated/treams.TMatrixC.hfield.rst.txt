@@ -1,4 +1,0 @@
-treams.TMatrixC.hfield
-======================
-
-.. autoattribute:: treams.TMatrixC.hfield

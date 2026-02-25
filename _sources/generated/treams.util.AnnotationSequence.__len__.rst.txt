@@ -1,6 +1,0 @@
-treams.util.AnnotationSequence.\_\_len\_\_
-==========================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationSequence.__len__

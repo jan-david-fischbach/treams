@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>treams.special &#8212; Treams</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/treams/special';</script>
+    <link rel="canonical" href="https://tfp-photonics.github.io/treams/_modules/treams/special.html" />
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Treams</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Welcome to treams’ documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory and Usage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro.html">Gallery</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../params.html">Basis sets and other core parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physicsarray.html">Physics-aware arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tmatrix.html">T-Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tmatrixc.html">Cylindrical T-matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smatrix.html">S-Matrices for plane waves</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../notebooks.html">Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/array_spheres.html">Array of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/array_spheres_tmatrixc.html">Array of Spheres to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/band_structure.html">Bandstructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/chain.html">Field Evaluations in Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/chain_tmatrixc.html">Chain to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cluster.html">Cluster TMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cluster_tmatrixc.html">Cluster TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/crystal.html">Photonic Crystal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/crystal_tmatrixc.html">Photonic Crystal TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/cylinder_tmatrixc.html">Infinite Cylinder TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/grating_tmatrixc.html">Grating from TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/grid.html">Grid of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/slab.html">Slab via SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/sphere.html">Single Sphere</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theory.html">Theory</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../treams.html">Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.CylindricalWaveBasis.html">treams.CylindricalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PlaneWaveBasisByUnitVector.html">treams.PlaneWaveBasisByUnitVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PlaneWaveBasisByComp.html">treams.PlaneWaveBasisByComp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SphericalWaveBasis.html">treams.SphericalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.PhysicsArray.html">treams.PhysicsArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SMatrix.html">treams.SMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.SMatrices.html">treams.SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.TMatrix.html">treams.TMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.TMatrixC.html">treams.TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.Lattice_class.html">treams.Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.Material.html">treams.Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.bfield.html">treams.bfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.changepoltype.html">treams.changepoltype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.chirality_density.html">treams.chirality_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.dfield.html">treams.dfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.efield.html">treams.efield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.expand.html">treams.expand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.expandlattice.html">treams.expandlattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.hfield.html">treams.hfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.permute.html">treams.permute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.plane_wave.html">treams.plane_wave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.rotate.html">treams.rotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.translate.html">treams.translate</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.sw.html">treams.sw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.periodic_to_cw.html">treams.sw.periodic_to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.periodic_to_pw.html">treams.sw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.rotate.html">treams.sw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.translate.html">treams.sw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.sw.translate_periodic.html">treams.sw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.cw.html">treams.cw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.periodic_to_pw.html">treams.cw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.rotate.html">treams.cw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.to_sw.html">treams.cw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.translate.html">treams.cw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.cw.translate_periodic.html">treams.cw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.pw.html">treams.pw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.to_cw.html">treams.pw.to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.to_sw.html">treams.pw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.translate.html">treams.pw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.pw.permute_xyz.html">treams.pw.permute_xyz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.io.html">treams.io</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.coeffs.html">treams.coeffs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.mie.html">treams.coeffs.mie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.mie_cyl.html">treams.coeffs.mie_cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.coeffs.fresnel.html">treams.coeffs.fresnel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.misc.html">treams.misc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.basischange.html">treams.misc.basischange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin1d.html">treams.misc.firstbrillouin1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin2d.html">treams.misc.firstbrillouin2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.firstbrillouin3d.html">treams.misc.firstbrillouin3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.pickmodes.html">treams.misc.pickmodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.refractive_index.html">treams.misc.refractive_index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.misc.wave_vec_z.html">treams.misc.wave_vec_z</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.config.html">treams.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/treams.util.html">treams.util</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.lattice.html">treams.lattice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw1d.html">treams.lattice.lsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw1d_shift.html">treams.lattice.lsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumcw2d.html">treams.lattice.lsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw1d.html">treams.lattice.lsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw1d_shift.html">treams.lattice.lsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw2d.html">treams.lattice.lsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw2d_shift.html">treams.lattice.lsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.lsumsw3d.html">treams.lattice.lsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw1d.html">treams.lattice.dsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw1d_shift.html">treams.lattice.dsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumcw2d.html">treams.lattice.dsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw1d.html">treams.lattice.dsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw1d_shift.html">treams.lattice.dsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw2d.html">treams.lattice.dsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw2d_shift.html">treams.lattice.dsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.dsumsw3d.html">treams.lattice.dsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.area.html">treams.lattice.area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cube.html">treams.lattice.cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cubeedge.html">treams.lattice.cubeedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.diffr_orders_circle.html">treams.lattice.diffr_orders_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.reciprocal.html">treams.lattice.reciprocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.volume.html">treams.lattice.volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.lattice.cython_lattice.html">treams.lattice.cython_lattice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/treams.special.html">treams.special</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.hankel1_d.html">treams.special.hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.hankel2_d.html">treams.special.hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.jv_d.html">treams.special.jv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.yv_d.html">treams.special.yv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel1.html">treams.special.spherical_hankel1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel2.html">treams.special.spherical_hankel2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel1_d.html">treams.special.spherical_hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_hankel2_d.html">treams.special.spherical_hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_jn_d.html">treams.special.spherical_jn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.spherical_yn_d.html">treams.special.spherical_yn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph_harm.html">treams.special.sph_harm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.lpmv.html">treams.special.lpmv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.incgamma.html">treams.special.incgamma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.intkambe.html">treams.special.intkambe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wignersmalld.html">treams.special.wignersmalld</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wignerd.html">treams.special.wignerd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.wigner3j.html">treams.special.wigner3j</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.pi_fun.html">treams.special.pi_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tau_fun.html">treams.special.tau_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_X.html">treams.special.vsh_X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_Y.html">treams.special.vsh_Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsh_Z.html">treams.special.vsh_Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_M.html">treams.special.vsw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_N.html">treams.special.vsw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_A.html">treams.special.vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rM.html">treams.special.vsw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rN.html">treams.special.vsw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsw_rA.html">treams.special.vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_A.html">treams.special.tl_vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_B.html">treams.special.tl_vsw_B</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_rA.html">treams.special.tl_vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vsw_rB.html">treams.special.tl_vsw_rB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_M.html">treams.special.vcw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_N.html">treams.special.vcw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_A.html">treams.special.vcw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rM.html">treams.special.vcw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rN.html">treams.special.vcw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcw_rA.html">treams.special.vcw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vcw.html">treams.special.tl_vcw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.tl_vcw_r.html">treams.special.tl_vcw_r</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_M.html">treams.special.vpw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_N.html">treams.special.vpw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpw_A.html">treams.special.vpw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2cyl.html">treams.special.car2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2sph.html">treams.special.car2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cyl2car.html">treams.special.cyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cyl2sph.html">treams.special.cyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph2car.html">treams.special.sph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.sph2cyl.html">treams.special.sph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2cyl.html">treams.special.vcar2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2sph.html">treams.special.vcar2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcyl2car.html">treams.special.vcyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcyl2sph.html">treams.special.vcyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsph2car.html">treams.special.vsph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vsph2cyl.html">treams.special.vsph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.car2pol.html">treams.special.car2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.pol2car.html">treams.special.pol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vcar2pol.html">treams.special.vcar2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.vpol2car.html">treams.special.vpol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/treams.special.cython_special.html">treams.special.cython_special</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">Development and contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams/issues/new?title=Issue%20on%20page%20%2F_modules/treams/special.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for treams.special</h1><div class="highlight"><pre>
+<span></span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Special (mathematical) functions.</span>
+
+<span class="sd">.. currentmodule:: treams.special</span>
+
+<span class="sd">Special mathematical functions used in :mod:`treams`. Some functions are reexported from</span>
+<span class="sd">:py:mod:`scipy.special`. Most functions are available as Numpy universal functions</span>
+<span class="sd">(:py:class:`numpy.ufunc`) or as generalized universal functions</span>
+<span class="sd">(:ref:`c-api.generalized-ufuncs`).</span>
+
+<span class="sd">Available functions</span>
+<span class="sd">===================</span>
+
+<span class="sd">Bessel and Hankel functions, with their spherical counterparts, derivatives</span>
+<span class="sd">---------------------------------------------------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   hankel1_d</span>
+<span class="sd">   hankel2_d</span>
+<span class="sd">   jv_d</span>
+<span class="sd">   yv_d</span>
+<span class="sd">   spherical_hankel1</span>
+<span class="sd">   spherical_hankel2</span>
+<span class="sd">   spherical_hankel1_d</span>
+<span class="sd">   spherical_hankel2_d</span>
+
+
+<span class="sd">Those functions are just reexported from Scipy. So, one only needs to import this</span>
+<span class="sd">subpackage within treams.</span>
+
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+<span class="sd">| :py:data:`~scipy.special.hankel1`\(v, z[, out])            | Hankel function of the  |</span>
+<span class="sd">|                                                            | first kind.             |</span>
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+<span class="sd">| :py:data:`~scipy.special.hankel2`\(v, z[, out])            | Hankel function of the  |</span>
+<span class="sd">|                                                            | second kind.            |</span>
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+<span class="sd">| :py:data:`~scipy.special.jv`\(v, z[, out])                 | Bessel function of the  |</span>
+<span class="sd">|                                                            | first kind of real      |</span>
+<span class="sd">|                                                            | order and complex       |</span>
+<span class="sd">|                                                            | argument.               |</span>
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+<span class="sd">| :py:data:`~scipy.special.yv`\(v, z[, out])                 | Bessel function of the  |</span>
+<span class="sd">|                                                            | second kind of real     |</span>
+<span class="sd">|                                                            | order and complex       |</span>
+<span class="sd">|                                                            | argument.               |</span>
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+<span class="sd">| | :py:func:`spherical_jn &lt;scipy.special.spherical_jn&gt;`\(n, | Spherical Bessel        |</span>
+<span class="sd">|   z[, derivative])                                         | function of the first   |</span>
+<span class="sd">|                                                            | kind or its derivative. |</span>
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+<span class="sd">| | :py:func:`spherical_yn &lt;scipy.special.spherical_yn&gt;`\(n, | Spherical Bessel        |</span>
+<span class="sd">|   z[, derivative])                                         | function of the second  |</span>
+<span class="sd">|                                                            | kind or its derivative. |</span>
+<span class="sd">+------------------------------------------------------------+-------------------------+</span>
+
+<span class="sd">Those functions just wrap Scipy functions with special optional arguments to be able to</span>
+<span class="sd">analogously access them like their non-spherical counterparts:</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   spherical_jn_d</span>
+<span class="sd">   spherical_yn_d</span>
+
+
+<span class="sd">Scipy functions with enhanced domain</span>
+<span class="sd">------------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   sph_harm</span>
+<span class="sd">   lpmv</span>
+
+
+<span class="sd">Integrals for the Ewald summation</span>
+<span class="sd">---------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   incgamma</span>
+<span class="sd">   intkambe</span>
+
+
+<span class="sd">Wigner d- and Wigner D-matrix elements</span>
+<span class="sd">--------------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   wignersmalld</span>
+<span class="sd">   wignerd</span>
+
+
+<span class="sd">Wigner 3j-symbols</span>
+<span class="sd">-----------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   wigner3j</span>
+
+
+<span class="sd">Vector wave functions</span>
+<span class="sd">--------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   pi_fun</span>
+<span class="sd">   tau_fun</span>
+
+<span class="sd">Spherical waves and translation coefficients</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   vsh_X</span>
+<span class="sd">   vsh_Y</span>
+<span class="sd">   vsh_Z</span>
+<span class="sd">   vsw_M</span>
+<span class="sd">   vsw_N</span>
+<span class="sd">   vsw_A</span>
+<span class="sd">   vsw_rM</span>
+<span class="sd">   vsw_rN</span>
+<span class="sd">   vsw_rA</span>
+<span class="sd">   tl_vsw_A</span>
+<span class="sd">   tl_vsw_B</span>
+<span class="sd">   tl_vsw_rA</span>
+<span class="sd">   tl_vsw_rB</span>
+
+
+<span class="sd">Cylindrical waves</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   vcw_M</span>
+<span class="sd">   vcw_N</span>
+<span class="sd">   vcw_A</span>
+<span class="sd">   vcw_rM</span>
+<span class="sd">   vcw_rN</span>
+<span class="sd">   vcw_rA</span>
+<span class="sd">   tl_vcw</span>
+<span class="sd">   tl_vcw_r</span>
+
+
+<span class="sd">Plane waves</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   vpw_M</span>
+<span class="sd">   vpw_N</span>
+<span class="sd">   vpw_A</span>
+
+
+<span class="sd">Coordinate system transformations</span>
+<span class="sd">---------------------------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   car2cyl</span>
+<span class="sd">   car2sph</span>
+<span class="sd">   cyl2car</span>
+<span class="sd">   cyl2sph</span>
+<span class="sd">   sph2car</span>
+<span class="sd">   sph2cyl</span>
+<span class="sd">   vcar2cyl</span>
+<span class="sd">   vcar2sph</span>
+<span class="sd">   vcyl2car</span>
+<span class="sd">   vcyl2sph</span>
+<span class="sd">   vsph2car</span>
+<span class="sd">   vsph2cyl</span>
+<span class="sd">   car2pol</span>
+<span class="sd">   pol2car</span>
+<span class="sd">   vcar2pol</span>
+<span class="sd">   vpol2car</span>
+
+
+<span class="sd">Cython module</span>
+<span class="sd">-------------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">   :toctree:</span>
+
+<span class="sd">   cython_special</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.special</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: F401</span>
+    <span class="n">hankel1</span><span class="p">,</span>
+    <span class="n">hankel2</span><span class="p">,</span>
+    <span class="n">jv</span><span class="p">,</span>
+    <span class="n">spherical_jn</span><span class="p">,</span>
+    <span class="n">spherical_yn</span><span class="p">,</span>
+    <span class="n">yv</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams.special</span><span class="w"> </span><span class="kn">import</span> <span class="n">_gufuncs</span><span class="p">,</span> <span class="n">_ufuncs</span>  <span class="c1"># noqa: F401</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams.special._gufuncs</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>  <span class="c1"># noqa: F401, F403</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">treams.special._ufuncs</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>  <span class="c1"># noqa: F401, F403</span>
+
+
+<div class="viewcode-block" id="spherical_jn_d">
+<a class="viewcode-back" href="../../generated/treams.special.spherical_jn_d.html#treams.special.spherical_jn_d">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">spherical_jn_d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Derivative of the spherical Bessel function of the first kind.</span>
+
+<span class="sd">    This is simply a wrapper for `scipy.special.spherical_jn(n, z, True)`, see</span>
+<span class="sd">    :py:func:`scipy.special.spherical_jn`. It&#39;s here to have a consistent way of</span>
+<span class="sd">    calling the derivative of a (spherical) Bessel or Hankel function.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        n (int, array_like): Order</span>
+<span class="sd">        z (float or complex, array_like): Argument</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float or complex</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        - `DLMF 10.47 &lt;https://dlmf.nist.gov/10.47&gt;`_</span>
+<span class="sd">        - `DLMF 10.51 &lt;https://dlmf.nist.gov/10.51&gt;`_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">spherical_jn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="spherical_yn_d">
+<a class="viewcode-back" href="../../generated/treams.special.spherical_yn_d.html#treams.special.spherical_yn_d">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">spherical_yn_d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Derivative of the spherical Bessel function of the second kind.</span>
+
+<span class="sd">    This is simply a wrapper for `scipy.special.spherical_yn(n, z, True)`, see</span>
+<span class="sd">    :py:func:`scipy.special.spherical_jn`. It&#39;s here to have a consistent way of</span>
+<span class="sd">    calling the derivative of a (spherical) Bessel or Hankel function.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        n (int, array_like): Order</span>
+<span class="sd">        z (float or complex, array_like): Argument</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float or complex</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        - `DLMF 10.47 &lt;https://dlmf.nist.gov/10.47&gt;`_</span>
+<span class="sd">        - `DLMF 10.51 &lt;https://dlmf.nist.gov/10.51&gt;`_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">spherical_yn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dominik Beutel, Elias Herzog, Jan David Fischbach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

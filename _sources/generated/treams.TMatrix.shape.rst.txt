@@ -1,6 +1,0 @@
-treams.TMatrix.shape
-====================
-
-.. currentmodule:: treams
-
-.. autoproperty:: TMatrix.shape

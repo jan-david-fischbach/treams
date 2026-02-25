@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.real
-===============================
-
-.. currentmodule:: treams.util
-
-.. autoproperty:: AnnotatedArray.real

@@ -1,6 +1,0 @@
-treams.TMatrix.xs
-=================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.xs

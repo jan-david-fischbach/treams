@@ -1,6 +1,0 @@
-treams.Lattice.\_\_str\_\_
-==========================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.__str__

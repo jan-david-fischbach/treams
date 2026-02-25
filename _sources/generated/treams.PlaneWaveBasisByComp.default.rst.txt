@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByComp.default
-===================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByComp.default

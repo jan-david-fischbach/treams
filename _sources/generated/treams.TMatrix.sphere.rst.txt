@@ -1,6 +1,0 @@
-treams.TMatrix.sphere
-=====================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.sphere

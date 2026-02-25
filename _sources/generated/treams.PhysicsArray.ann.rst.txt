@@ -1,6 +1,0 @@
-treams.PhysicsArray.ann
-=======================
-
-.. currentmodule:: treams
-
-.. autoproperty:: PhysicsArray.ann

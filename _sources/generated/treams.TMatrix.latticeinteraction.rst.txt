@@ -1,4 +1,0 @@
-treams.TMatrix.latticeinteraction
-=================================
-
-.. autoattribute:: treams.TMatrix.latticeinteraction

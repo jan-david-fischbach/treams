@@ -1,4 +1,0 @@
-treams.SMatrix.gfield
-=====================
-
-.. autoattribute:: treams.SMatrix.gfield

@@ -1,6 +1,0 @@
-treams.SMatrices.\_\_le\_\_
-===========================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrices.__le__

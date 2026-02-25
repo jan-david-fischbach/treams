@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByUnitVector.bycomp
-========================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByUnitVector.bycomp

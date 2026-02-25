@@ -1,6 +1,0 @@
-treams.Lattice.cubic
-====================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.cubic

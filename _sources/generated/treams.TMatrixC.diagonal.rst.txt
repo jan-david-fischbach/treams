@@ -1,6 +1,0 @@
-treams.TMatrixC.diagonal
-========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.diagonal

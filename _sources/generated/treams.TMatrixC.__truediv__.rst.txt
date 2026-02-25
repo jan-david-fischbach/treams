@@ -1,6 +1,0 @@
-treams.TMatrixC.\_\_truediv\_\_
-===============================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.__truediv__

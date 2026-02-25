@@ -1,6 +1,0 @@
-treams.TMatrix.flatten
-======================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.flatten

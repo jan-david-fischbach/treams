@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByComp.isdisjoint
-======================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByComp.isdisjoint

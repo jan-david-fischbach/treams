@@ -1,6 +1,0 @@
-treams.SMatrix.sum
-==================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.sum

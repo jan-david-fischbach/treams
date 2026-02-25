@@ -1,6 +1,0 @@
-treams.util.OrderedSet.\_\_repr\_\_
-===================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: OrderedSet.__repr__

@@ -1,4 +1,0 @@
-treams.util.AnnotationSequence.as\_dict
-=======================================
-
-.. autoattribute:: treams.util.AnnotationSequence.as_dict

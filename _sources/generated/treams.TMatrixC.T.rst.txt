@@ -1,6 +1,0 @@
-treams.TMatrixC.T
-=================
-
-.. currentmodule:: treams
-
-.. autoproperty:: TMatrixC.T

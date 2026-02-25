@@ -1,4 +1,0 @@
-treams.TMatrixC.rotate
-======================
-
-.. autoattribute:: treams.TMatrixC.rotate

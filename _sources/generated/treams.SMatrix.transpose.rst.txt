@@ -1,6 +1,0 @@
-treams.SMatrix.transpose
-========================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.transpose

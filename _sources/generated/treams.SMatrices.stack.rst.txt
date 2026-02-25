@@ -1,6 +1,0 @@
-treams.SMatrices.stack
-======================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrices.stack

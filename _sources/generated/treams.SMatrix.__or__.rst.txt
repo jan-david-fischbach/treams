@@ -1,6 +1,0 @@
-treams.SMatrix.\_\_or\_\_
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.__or__

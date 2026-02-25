@@ -1,6 +1,0 @@
-treams.util.AnnotationSequence.index
-====================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationSequence.index

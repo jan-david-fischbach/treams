@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.\_\_xor\_\_
-======================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotatedArray.__xor__

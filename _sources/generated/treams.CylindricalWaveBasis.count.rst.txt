@@ -1,6 +1,0 @@
-treams.CylindricalWaveBasis.count
-=================================
-
-.. currentmodule:: treams
-
-.. automethod:: CylindricalWaveBasis.count

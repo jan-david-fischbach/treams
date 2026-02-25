@@ -1,6 +1,0 @@
-treams.special.cython\_special.pi\_fun
-======================================
-
-.. currentmodule:: treams.special.cython_special
-
-.. autofunction:: pi_fun

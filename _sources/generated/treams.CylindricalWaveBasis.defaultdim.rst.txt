@@ -1,6 +1,0 @@
-treams.CylindricalWaveBasis.defaultdim
-======================================
-
-.. currentmodule:: treams
-
-.. automethod:: CylindricalWaveBasis.defaultdim

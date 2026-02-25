@@ -1,6 +1,0 @@
-treams.special.cython\_special.wigner3j
-=======================================
-
-.. currentmodule:: treams.special.cython_special
-
-.. autofunction:: wigner3j

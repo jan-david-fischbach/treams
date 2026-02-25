@@ -1,6 +1,0 @@
-treams.SMatrix.diagonal
-=======================
-
-.. currentmodule:: treams
-
-.. automethod:: SMatrix.diagonal

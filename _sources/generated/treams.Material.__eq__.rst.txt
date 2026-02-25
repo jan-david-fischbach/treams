@@ -1,6 +1,0 @@
-treams.Material.\_\_eq\_\_
-==========================
-
-.. currentmodule:: treams
-
-.. automethod:: Material.__eq__

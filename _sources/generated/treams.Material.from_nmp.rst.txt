@@ -1,6 +1,0 @@
-treams.Material.from\_nmp
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: Material.from_nmp

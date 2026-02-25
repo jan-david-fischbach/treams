@@ -1,6 +1,0 @@
-treams.Lattice.\_\_ge\_\_
-=========================
-
-.. currentmodule:: treams
-
-.. automethod:: Lattice.__ge__

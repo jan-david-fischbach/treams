@@ -1,6 +1,0 @@
-treams.TMatrix.\_\_neg\_\_
-==========================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrix.__neg__

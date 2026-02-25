@@ -1,6 +1,0 @@
-treams.util.AnnotatedArray.astype
-=================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotatedArray.astype

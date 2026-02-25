@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByComp.\_\_xor\_\_
-=======================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByComp.__xor__

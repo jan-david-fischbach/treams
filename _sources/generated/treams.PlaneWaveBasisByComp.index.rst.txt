@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByComp.index
-=================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByComp.index

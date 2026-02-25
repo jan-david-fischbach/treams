@@ -1,4 +1,0 @@
-treams.SMatrix.efield
-=====================
-
-.. autoattribute:: treams.SMatrix.efield

@@ -1,4 +1,0 @@
-treams.PhysicsArray.gfield
-==========================
-
-.. autoattribute:: treams.PhysicsArray.gfield

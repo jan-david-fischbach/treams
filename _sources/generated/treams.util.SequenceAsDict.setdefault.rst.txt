@@ -1,6 +1,0 @@
-treams.util.SequenceAsDict.setdefault
-=====================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: SequenceAsDict.setdefault

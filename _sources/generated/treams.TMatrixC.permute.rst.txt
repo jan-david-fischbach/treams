@@ -1,4 +1,0 @@
-treams.TMatrixC.permute
-=======================
-
-.. autoattribute:: treams.TMatrixC.permute

@@ -1,6 +1,0 @@
-treams.PhysicsArray.size
-========================
-
-.. currentmodule:: treams
-
-.. autoproperty:: PhysicsArray.size

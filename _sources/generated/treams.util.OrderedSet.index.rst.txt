@@ -1,6 +1,0 @@
-treams.util.OrderedSet.index
-============================
-
-.. currentmodule:: treams.util
-
-.. automethod:: OrderedSet.index

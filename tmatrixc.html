@@ -1,60 +1,605 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="./">
+
+<html lang="en" data-content_root="./" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Cylindrical T-matrices &#8212; treams 0.1.dev286+gd24f1430c documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=0c472235" />
-    <link rel="stylesheet" type="text/css" href="_static/pyramid.css?v=424f8d56" />
+    <title>Cylindrical T-matrices &#8212; Treams</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f4ec84db" />
-    <script src="_static/documentation_options.js?v=a3b1e7ad"></script>
-    <script src="_static/doctools.js?v=fd6eb6e6"></script>
-    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tmatrixc';</script>
+    <link rel="canonical" href="https://tfp-photonics.github.io/treams/tmatrixc.html" />
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="S-Matrices for plane waves" href="smatrix.html" />
     <link rel="prev" title="T-Matrices" href="tmatrix.html" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<!--[if lte IE 6]>
-<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  </head><body>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="smatrix.html" title="S-Matrices for plane waves"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="tmatrix.html" title="T-Matrices"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">treams 0.1.dev286+gd24f1430c documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="intro.html" accesskey="U">Examples</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Cylindrical T-matrices</a></li> 
-      </ul>
-    </div>  
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Treams</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to treams’ documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory and Usage</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Gallery</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="params.html">Basis sets and other core parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physicsarray.html">Physics-aware arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tmatrix.html">T-Matrices</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Cylindrical T-matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smatrix.html">S-Matrices for plane waves</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks.html">Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/array_spheres.html">Array of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/array_spheres_tmatrixc.html">Array of Spheres to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/band_structure.html">Bandstructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/chain.html">Field Evaluations in Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/chain_tmatrixc.html">Chain to TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/cluster.html">Cluster TMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/cluster_tmatrixc.html">Cluster TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/crystal.html">Photonic Crystal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/crystal_tmatrixc.html">Photonic Crystal TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/cylinder_tmatrixc.html">Infinite Cylinder TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/grating_tmatrixc.html">Grating from TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/grid.html">Grid of Spheres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/slab.html">Slab via SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/sphere.html">Single Sphere</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="treams.html">Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.CylindricalWaveBasis.html">treams.CylindricalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.PlaneWaveBasisByUnitVector.html">treams.PlaneWaveBasisByUnitVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.PlaneWaveBasisByComp.html">treams.PlaneWaveBasisByComp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.SphericalWaveBasis.html">treams.SphericalWaveBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.PhysicsArray.html">treams.PhysicsArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.SMatrix.html">treams.SMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.SMatrices.html">treams.SMatrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.TMatrix.html">treams.TMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.TMatrixC.html">treams.TMatrixC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.Lattice_class.html">treams.Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.Material.html">treams.Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.bfield.html">treams.bfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.changepoltype.html">treams.changepoltype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.chirality_density.html">treams.chirality_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.dfield.html">treams.dfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.efield.html">treams.efield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.expand.html">treams.expand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.expandlattice.html">treams.expandlattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.hfield.html">treams.hfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.permute.html">treams.permute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.plane_wave.html">treams.plane_wave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.rotate.html">treams.rotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.translate.html">treams.translate</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.sw.html">treams.sw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.sw.periodic_to_cw.html">treams.sw.periodic_to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.sw.periodic_to_pw.html">treams.sw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.sw.rotate.html">treams.sw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.sw.translate.html">treams.sw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.sw.translate_periodic.html">treams.sw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.cw.html">treams.cw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.cw.periodic_to_pw.html">treams.cw.periodic_to_pw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.cw.rotate.html">treams.cw.rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.cw.to_sw.html">treams.cw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.cw.translate.html">treams.cw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.cw.translate_periodic.html">treams.cw.translate_periodic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.pw.html">treams.pw</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.pw.to_cw.html">treams.pw.to_cw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.pw.to_sw.html">treams.pw.to_sw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.pw.translate.html">treams.pw.translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.pw.permute_xyz.html">treams.pw.permute_xyz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.io.html">treams.io</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.coeffs.html">treams.coeffs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.coeffs.mie.html">treams.coeffs.mie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.coeffs.mie_cyl.html">treams.coeffs.mie_cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.coeffs.fresnel.html">treams.coeffs.fresnel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.misc.html">treams.misc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.basischange.html">treams.misc.basischange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.firstbrillouin1d.html">treams.misc.firstbrillouin1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.firstbrillouin2d.html">treams.misc.firstbrillouin2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.firstbrillouin3d.html">treams.misc.firstbrillouin3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.pickmodes.html">treams.misc.pickmodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.refractive_index.html">treams.misc.refractive_index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.misc.wave_vec_z.html">treams.misc.wave_vec_z</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.config.html">treams.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/treams.util.html">treams.util</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.lattice.html">treams.lattice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumcw1d.html">treams.lattice.lsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumcw1d_shift.html">treams.lattice.lsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumcw2d.html">treams.lattice.lsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumsw1d.html">treams.lattice.lsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumsw1d_shift.html">treams.lattice.lsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumsw2d.html">treams.lattice.lsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumsw2d_shift.html">treams.lattice.lsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.lsumsw3d.html">treams.lattice.lsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumcw1d.html">treams.lattice.dsumcw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumcw1d_shift.html">treams.lattice.dsumcw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumcw2d.html">treams.lattice.dsumcw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumsw1d.html">treams.lattice.dsumsw1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumsw1d_shift.html">treams.lattice.dsumsw1d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumsw2d.html">treams.lattice.dsumsw2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumsw2d_shift.html">treams.lattice.dsumsw2d_shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.dsumsw3d.html">treams.lattice.dsumsw3d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.area.html">treams.lattice.area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.cube.html">treams.lattice.cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.cubeedge.html">treams.lattice.cubeedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.diffr_orders_circle.html">treams.lattice.diffr_orders_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.reciprocal.html">treams.lattice.reciprocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.volume.html">treams.lattice.volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.lattice.cython_lattice.html">treams.lattice.cython_lattice</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/treams.special.html">treams.special</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.hankel1_d.html">treams.special.hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.hankel2_d.html">treams.special.hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.jv_d.html">treams.special.jv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.yv_d.html">treams.special.yv_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.spherical_hankel1.html">treams.special.spherical_hankel1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.spherical_hankel2.html">treams.special.spherical_hankel2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.spherical_hankel1_d.html">treams.special.spherical_hankel1_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.spherical_hankel2_d.html">treams.special.spherical_hankel2_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.spherical_jn_d.html">treams.special.spherical_jn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.spherical_yn_d.html">treams.special.spherical_yn_d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.sph_harm.html">treams.special.sph_harm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.lpmv.html">treams.special.lpmv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.incgamma.html">treams.special.incgamma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.intkambe.html">treams.special.intkambe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.wignersmalld.html">treams.special.wignersmalld</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.wignerd.html">treams.special.wignerd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.wigner3j.html">treams.special.wigner3j</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.pi_fun.html">treams.special.pi_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tau_fun.html">treams.special.tau_fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsh_X.html">treams.special.vsh_X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsh_Y.html">treams.special.vsh_Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsh_Z.html">treams.special.vsh_Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsw_M.html">treams.special.vsw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsw_N.html">treams.special.vsw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsw_A.html">treams.special.vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsw_rM.html">treams.special.vsw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsw_rN.html">treams.special.vsw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsw_rA.html">treams.special.vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tl_vsw_A.html">treams.special.tl_vsw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tl_vsw_B.html">treams.special.tl_vsw_B</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tl_vsw_rA.html">treams.special.tl_vsw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tl_vsw_rB.html">treams.special.tl_vsw_rB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcw_M.html">treams.special.vcw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcw_N.html">treams.special.vcw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcw_A.html">treams.special.vcw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcw_rM.html">treams.special.vcw_rM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcw_rN.html">treams.special.vcw_rN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcw_rA.html">treams.special.vcw_rA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tl_vcw.html">treams.special.tl_vcw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.tl_vcw_r.html">treams.special.tl_vcw_r</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vpw_M.html">treams.special.vpw_M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vpw_N.html">treams.special.vpw_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vpw_A.html">treams.special.vpw_A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.car2cyl.html">treams.special.car2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.car2sph.html">treams.special.car2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.cyl2car.html">treams.special.cyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.cyl2sph.html">treams.special.cyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.sph2car.html">treams.special.sph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.sph2cyl.html">treams.special.sph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcar2cyl.html">treams.special.vcar2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcar2sph.html">treams.special.vcar2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcyl2car.html">treams.special.vcyl2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcyl2sph.html">treams.special.vcyl2sph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsph2car.html">treams.special.vsph2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vsph2cyl.html">treams.special.vsph2cyl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.car2pol.html">treams.special.car2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.pol2car.html">treams.special.pol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vcar2pol.html">treams.special.vcar2pol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.vpol2car.html">treams.special.vpol2car</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/treams.special.cython_special.html">treams.special.cython_special</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Development and contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams/edit/main/docs/tmatrixc.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jan-david-fischbach/treams/issues/new?title=Issue%20on%20page%20%2Ftmatrixc.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tmatrixc.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cylindrical T-matrices</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infinitely-long-cylinders">(Infinitely long) Cylinders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cylindrical-t-matrices-for-one-dimensional-arrays-of-spherical-t-matrices">Cylindrical T-matrices for one-dimensional arrays of spherical T-matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clusters">Clusters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-arrays-along-the-x-axis">One-dimensional arrays (along the x-axis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-arrays-in-the-x-y-plane">Two-dimensional arrays (in the x-y-plane)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="cylindrical-t-matrices">
-<h1>Cylindrical T-matrices<a class="headerlink" href="#cylindrical-t-matrices" title="Link to this heading">¶</a></h1>
+<h1>Cylindrical T-matrices<a class="headerlink" href="#cylindrical-t-matrices" title="Link to this heading">#</a></h1>
 <nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
@@ -81,7 +626,7 @@ objects in a local and global basis and to place these objects in a lattice. The
 lattices can only extend in one and two dimensions; the z-direction is implicitly
 periodic already.</p>
 <section id="infinitely-long-cylinders">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">(Infinitely long) Cylinders</a><a class="headerlink" href="#infinitely-long-cylinders" title="Link to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">(Infinitely long) Cylinders</a><a class="headerlink" href="#infinitely-long-cylinders" title="Link to this heading">#</a></h2>
 <p>The first simple object, for which we’ll calculate the cylindrical T-matrix is an
 infinitely long cylinder. (Similar to the case of spheres and T-matrices those
 cylinders could also have multiple concentric shells.) Due to the rotation symmetry
@@ -130,22 +675,22 @@ equally simple.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="_downloads/324821477b4dad4667ed6c66c6c6b252/cylinder_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="_downloads/d58c5c19360e1c41f47113afbb54b951/cylinder_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
 <figure class="align-default" id="id1">
 <img alt="_images/cylinder_tmatrixc_00.png" class="plot-directive" src="_images/cylinder_tmatrixc_00.png" />
 <figcaption>
-<p><span class="caption-text">(<a class="reference download internal" download="" href="_downloads/486fde23a88c68d4f5bf2f75fdf5746c/cylinder_tmatrixc_00.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/be160498cd9989baf45b1ae8bbf4cac8/cylinder_tmatrixc_00.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/8bdf80f0b426d91d0f6756932c0f6212/cylinder_tmatrixc_00.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">(<a class="reference download internal" download="" href="_downloads/fc4d845d2991a5301fdb70e59404fc27/cylinder_tmatrixc_00.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/a2ec7ead616472731bafecd0b1d449cc/cylinder_tmatrixc_00.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/cb90c286cc20acf387112c9ca6f15fd1/cylinder_tmatrixc_00.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id2">
 <img alt="_images/cylinder_tmatrixc_01.png" class="plot-directive" src="_images/cylinder_tmatrixc_01.png" />
 <figcaption>
-<p><span class="caption-text">(<a class="reference download internal" download="" href="_downloads/6e006d862214c45c3d2dc8feb4231c53/cylinder_tmatrixc_01.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/e980714f5d866e25c3f9563d466984a2/cylinder_tmatrixc_01.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/7c9ab506d8614dddb2bd0f9dcb4ee96c/cylinder_tmatrixc_01.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">(<a class="reference download internal" download="" href="_downloads/3025682661556ec60008dceeccac2a69/cylinder_tmatrixc_01.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/3d419ded6fc9ab0c4600d4c1664d9981/cylinder_tmatrixc_01.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/5178cf1ba3e0386400189e45b008744a/cylinder_tmatrixc_01.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="cylindrical-t-matrices-for-one-dimensional-arrays-of-spherical-t-matrices">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Cylindrical T-matrices for one-dimensional arrays of spherical T-matrices</a><a class="headerlink" href="#cylindrical-t-matrices-for-one-dimensional-arrays-of-spherical-t-matrices" title="Link to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Cylindrical T-matrices for one-dimensional arrays of spherical T-matrices</a><a class="headerlink" href="#cylindrical-t-matrices-for-one-dimensional-arrays-of-spherical-t-matrices" title="Link to this heading">#</a></h2>
 <p>For our next example we want to look at the system of spheres on a one-dimensional
 lattice again (<a class="reference internal" href="tmatrix.html#one-dimensional-arrays-along-z"><span class="std std-ref">One-dimensional arrays (along z)</span></a>). They fulfil all
 properties that define structures where the use of cylindrical waves is beneficial,
@@ -192,13 +737,13 @@ outside of the spheres we can use the method of
 <a class="reference internal" href="tmatrix.html#one-dimensional-arrays-along-z"><span class="std std-ref">One-dimensional arrays (along z)</span></a>.</p>
 <p>Finally, we can plot the results. To illustrate the periodicity better, three unit cells
 are shown.</p>
-<p>(<a class="reference download internal" download="" href="_downloads/5236e293f35f25d568f5be377e7e739b/chain_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/fae344f23063f98ca33608139da0aca2/chain_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/e27a71c824dced3140e8cb177374d1e6/chain_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/4a7c67b9ac1e0fdbe3f51088596eb635/chain_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="_downloads/58c0b4402bc8c82ec58f944377bdb4cd/chain_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/2edfb50ece0ed5b2b5eabc69a5965825/chain_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/31a5c267c428e4393b62c11b0e9e2837/chain_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/91eb9e12a4d03d1a7dbb8c60ca8d8218/chain_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
 <figure class="align-default">
 <img alt="_images/chain_tmatrixc.png" class="plot-directive" src="_images/chain_tmatrixc.png" />
 </figure>
 </section>
 <section id="clusters">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Clusters</a><a class="headerlink" href="#clusters" title="Link to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Clusters</a><a class="headerlink" href="#clusters" title="Link to this heading">#</a></h2>
 <p>Similarly to the case of spheres we can also calculate the response from a cluster of
 objects. For the example want to simulate a cylinder together with a chain of spheres
 in the cylindrical wave basis as described in the previous section.</p>
@@ -236,13 +781,13 @@ basis as before</p>
 </div>
 <p>and we solve calculate the scattered field coefficients, whose field representation we
 then plot</p>
-<p>(<a class="reference download internal" download="" href="_downloads/9c856a1b2c00decdfeed2136112981c3/cluster_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/ab9c5052c531f3f80d0cb45fb3fa5a1f/cluster_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/067a2a7a115448e94e7a47db5318923c/cluster_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/23a419322006a5b3216faeba8603d6af/cluster_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="_downloads/7931246939180dc8c88535e62a68eb6b/cluster_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/70051b348124ce4a630713831d9b646f/cluster_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/dc2175f09019c3053175bb3c00eb29e3/cluster_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/8e3a90a69dab7cbb9ee3140b430dca30/cluster_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
 <figure class="align-default">
 <img alt="_images/cluster_tmatrixc.png" class="plot-directive" src="_images/cluster_tmatrixc.png" />
 </figure>
 </section>
 <section id="one-dimensional-arrays-along-the-x-axis">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">One-dimensional arrays (along the x-axis)</a><a class="headerlink" href="#one-dimensional-arrays-along-the-x-axis" title="Link to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">One-dimensional arrays (along the x-axis)</a><a class="headerlink" href="#one-dimensional-arrays-along-the-x-axis" title="Link to this heading">#</a></h2>
 <p>Now, we take the chain of spheres and a cylinder and place them in a grating structure
 along the x-direction. We start again by defining the parameters and calculating the
 relevant cylindrical T-matrices.</p>
@@ -299,13 +844,13 @@ area</p>
 </pre></div>
 </div>
 <p>and plot the results.</p>
-<p>(<a class="reference download internal" download="" href="_downloads/9e54f0a44de2314df0e78fc218980e52/grating_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/58f43d0e5af5cc8d0431555951a7bb95/grating_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/82904069830a89fc9355311824a58e7c/grating_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/6ccfadf905d95669273471ac226856b6/grating_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="_downloads/b6adaafb52664715df4ba390fa25e9e0/grating_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/9afa35da9e3157ba5cee6110c4cd32da/grating_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/a9ec6a19d98621fd3e581cbfc76e17e5/grating_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/9edac8f65234adea5af84af7d30b6d3d/grating_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
 <figure class="align-default">
 <img alt="_images/grating_tmatrixc.png" class="plot-directive" src="_images/grating_tmatrixc.png" />
 </figure>
 </section>
 <section id="two-dimensional-arrays-in-the-x-y-plane">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Two-dimensional arrays (in the x-y-plane)</a><a class="headerlink" href="#two-dimensional-arrays-in-the-x-y-plane" title="Link to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Two-dimensional arrays (in the x-y-plane)</a><a class="headerlink" href="#two-dimensional-arrays-in-the-x-y-plane" title="Link to this heading">#</a></h2>
 <p>As last example, we want to examine a structure that is a photonic crystal consisting
 of infinitely long cylinders in a square array in the x-y-plane.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">k0s</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
@@ -330,84 +875,134 @@ of infinitely long cylinders in a square array in the x-y-plane.</p>
 </div>
 <p>Similarly to the case of spheres and a three-dimensional lattice, we can check the
 smallest singular value.</p>
-<p>(<a class="reference download internal" download="" href="_downloads/5c06143dbee61d24c66afb6e20ad6349/crystal_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/d258772477cb85b73a7ac50fc7e46df2/crystal_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/b9c0dc33d1f6b1c10e8abfc2e1f2bade/crystal_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/e5badc76e924732d0a242ce10ae780cb/crystal_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="_downloads/ff23c8f88cd714a219fa7f26a72227ed/crystal_tmatrixc.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/fd98d840a9d3fc2c1ac2c08a45ed0b61/crystal_tmatrixc.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/c94df28ffefedb15ff4d569491fa47a9/crystal_tmatrixc.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/5e1c748bab43624dd2c6218257d019ba/crystal_tmatrixc.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
 <figure class="align-default">
 <img alt="_images/crystal_tmatrixc.png" class="plot-directive" src="_images/crystal_tmatrixc.png" />
 </figure>
 </section>
 </section>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "jan-david-fischbach/treams",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
-            <div class="clearer"></div>
-          </div>
-        </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tmatrix.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">T-Matrices</p>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-<h3><a href="index.html">Table of Contents</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting started</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="intro.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="treams.html">Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev.html">Development and contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+    </a>
+    <a class="right-next"
+       href="smatrix.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">S-Matrices for plane waves</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infinitely-long-cylinders">(Infinitely long) Cylinders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cylindrical-t-matrices-for-one-dimensional-arrays-of-spherical-t-matrices">Cylindrical T-matrices for one-dimensional arrays of spherical T-matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clusters">Clusters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-arrays-along-the-x-axis">One-dimensional arrays (along the x-axis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-arrays-in-the-x-y-plane">Two-dimensional arrays (in the x-y-plane)</a></li>
 </ul>
+  </nav></div>
 
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="tmatrix.html"
-                          title="previous chapter">T-Matrices</a></p>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dominik Beutel, Elias Herzog, Jan David Fischbach
+</p>
+
   </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="smatrix.html"
-                          title="next chapter">S-Matrices for plane waves</a></p>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/tmatrixc.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="smatrix.html" title="S-Matrices for plane waves"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="tmatrix.html" title="T-Matrices"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">treams 0.1.dev286+gd24f1430c documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="intro.html" >Examples</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Cylindrical T-matrices</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2023, Dominik Beutel.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.4.
-    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

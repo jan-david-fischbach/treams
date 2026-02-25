@@ -1,6 +1,0 @@
-treams.PlaneWaveBasisByComp.count
-=================================
-
-.. currentmodule:: treams
-
-.. automethod:: PlaneWaveBasisByComp.count

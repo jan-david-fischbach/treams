@@ -1,6 +1,0 @@
-treams.util.AnnotationSequence.\_\_repr\_\_
-===========================================
-
-.. currentmodule:: treams.util
-
-.. automethod:: AnnotationSequence.__repr__

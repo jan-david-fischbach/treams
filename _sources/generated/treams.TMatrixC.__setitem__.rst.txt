@@ -1,6 +1,0 @@
-treams.TMatrixC.\_\_setitem\_\_
-===============================
-
-.. currentmodule:: treams
-
-.. automethod:: TMatrixC.__setitem__
