@@ -1,0 +1,6 @@
+treams.io.save\_hdf5
+====================
+
+.. currentmodule:: treams.io
+
+.. autofunction:: save_hdf5

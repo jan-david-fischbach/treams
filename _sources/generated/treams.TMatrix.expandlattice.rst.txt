@@ -1,0 +1,4 @@
+treams.TMatrix.expandlattice
+============================
+
+.. autoattribute:: treams.TMatrix.expandlattice

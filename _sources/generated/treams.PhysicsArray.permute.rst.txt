@@ -1,0 +1,4 @@
+treams.PhysicsArray.permute
+===========================
+
+.. autoattribute:: treams.PhysicsArray.permute

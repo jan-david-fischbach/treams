@@ -1,0 +1,4 @@
+treams.PhysicsArray.expandlattice
+=================================
+
+.. autoattribute:: treams.PhysicsArray.expandlattice

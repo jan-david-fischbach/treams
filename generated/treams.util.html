@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>treams.util &#8212; treams 0.1.dev286+gd24f1430c documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=0c472235" />
+    <link rel="stylesheet" type="text/css" href="../_static/pyramid.css?v=424f8d56" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f4ec84db" />
+    <script src="../_static/documentation_options.js?v=a3b1e7ad"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="treams.util.HANDLED_FUNCTIONS" href="treams.util.HANDLED_FUNCTIONS.html" />
+    <link rel="prev" title="treams.config" href="treams.config.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="treams.util.HANDLED_FUNCTIONS.html" title="treams.util.HANDLED_FUNCTIONS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="treams.config.html" title="treams.config"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">treams 0.1.dev286+gd24f1430c documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../treams.html" accesskey="U">Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">treams.util</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-treams.util">
+<span id="treams-util"></span><h1>treams.util<a class="headerlink" href="#module-treams.util" title="Link to this heading">¶</a></h1>
+<p>Utilities.</p>
+<p>Collection of functions to make <a class="reference internal" href="treams.util.AnnotatedArray.html#treams.util.AnnotatedArray" title="treams.util.AnnotatedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">AnnotatedArray</span></code></a> work. The implementation is
+aimed to be quite general, while still providing a solid basis for the rest of the code.</p>
+<p class="rubric">Module Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.HANDLED_FUNCTIONS.html#treams.util.HANDLED_FUNCTIONS" title="treams.util.HANDLED_FUNCTIONS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HANDLED_FUNCTIONS</span></code></a></p></td>
+<td><p>Dictionary of numpy functions implemented for AnnotatedArrays.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.diag.html#treams.util.diag" title="treams.util.diag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diag</span></code></a>(a[, k])</p></td>
+<td><p>Extract diagonal from an array or create an diagonal array.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.implements.html#treams.util.implements" title="treams.util.implements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">implements</span></code></a>(np_func)</p></td>
+<td><p>Decorator to register an __array_function__ implementation to AnnotatedArrays.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.lstsq.html#treams.util.lstsq" title="treams.util.lstsq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lstsq</span></code></a>(a, b[, rcond])</p></td>
+<td><p>Solve linear system using least squares.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.ones_like.html#treams.util.ones_like" title="treams.util.ones_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ones_like</span></code></a>(a[, dtype, order, shape])</p></td>
+<td><p>Create a numpy array like the given array containing ones.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.solve.html#treams.util.solve" title="treams.util.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve</span></code></a>(a, b)</p></td>
+<td><p>Solve linear system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.svd.html#treams.util.svd" title="treams.util.svd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">svd</span></code></a>(a[, full_matrices, compute_uv, hermitian])</p></td>
+<td><p>Compute the singular value decomposition.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.tril.html#treams.util.tril" title="treams.util.tril"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tril</span></code></a>(a[, k])</p></td>
+<td><p>Get lower trinagular matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.triu.html#treams.util.triu" title="treams.util.triu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triu</span></code></a>(a[, k])</p></td>
+<td><p>Get upper trinagular matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.zeros_like.html#treams.util.zeros_like" title="treams.util.zeros_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zeros_like</span></code></a>(a[, dtype, order, shape])</p></td>
+<td><p>Create a numpy array like the given array containing zeros.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.AnnotatedArray.html#treams.util.AnnotatedArray" title="treams.util.AnnotatedArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnotatedArray</span></code></a>(array[, ann])</p></td>
+<td><p>Array that keeps track of annotations for each dimension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.AnnotationDict.html#treams.util.AnnotationDict" title="treams.util.AnnotationDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnotationDict</span></code></a>([items])</p></td>
+<td><p>Dictionary that notifies the user when overwriting keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.AnnotationSequence.html#treams.util.AnnotationSequence" title="treams.util.AnnotationSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnotationSequence</span></code></a>(*args[, mapping])</p></td>
+<td><p>A Sequence of dictionaries.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.OrderedSet.html#treams.util.OrderedSet" title="treams.util.OrderedSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OrderedSet</span></code></a>()</p></td>
+<td><p>Ordered set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.SequenceAsDict.html#treams.util.SequenceAsDict" title="treams.util.SequenceAsDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SequenceAsDict</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Exceptions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="treams.util.AnnotationError.html#treams.util.AnnotationError" title="treams.util.AnnotationError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnotationError</span></code></a></p></td>
+<td><p>Custom exception for Annotations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="treams.util.AnnotationWarning.html#treams.util.AnnotationWarning" title="treams.util.AnnotationWarning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnotationWarning</span></code></a></p></td>
+<td><p>Custom warning for Annotations.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../treams.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">Development and contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="treams.config.html"
+                          title="previous chapter">treams.config</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="treams.util.HANDLED_FUNCTIONS.html"
+                          title="next chapter">treams.util.HANDLED_FUNCTIONS</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/treams.util.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="treams.util.HANDLED_FUNCTIONS.html" title="treams.util.HANDLED_FUNCTIONS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="treams.config.html" title="treams.config"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">treams 0.1.dev286+gd24f1430c documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../treams.html" >Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">treams.util</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Dominik Beutel.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.4.
+    </div>
+  </body>
+</html>
