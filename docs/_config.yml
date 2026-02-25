@@ -7,7 +7,7 @@ author: Dominik Beutel, Elias Herzog, Jan David Fischbach
 # Force re-execution of notebooks on each build.
 # See https://jupyter-book.readthedocs.io/v1/content/execute.html
 execute:
-  execute_notebooks: off
+  execute_notebooks: cache
   timeout: -1
   allow_errors: false
   # execute_notebooks: force
