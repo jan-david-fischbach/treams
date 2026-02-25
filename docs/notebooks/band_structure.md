@@ -1,8 +1,29 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.19.1
+  formats: md:myst
+kernelspec:
+  name: python3
+  language: python
+  display_name: Python 3 (ipykernel)
+---
+
+# Bandstructure
+
+```{code-cell}
 import matplotlib.pyplot as plt
 import numpy as np
+```
 
+```{code-cell}
 import treams
+```
 
+```{code-cell}
 k0s = 2 * np.pi * np.linspace(1 / 10_000, 1 / 350, 200)
 material_slab = 3
 thickness = 10
@@ -11,7 +32,9 @@ lattice = treams.Lattice.square(500)
 radius = 100
 lmax = 3
 az = 210
+```
 
+```{code-cell}
 res = []
 for i, k0 in enumerate(k0s):
     kpar = [0, 0]
@@ -29,8 +52,9 @@ for i, k0 in enumerate(k0s):
     x = x * az / np.pi
     sel = x[np.abs(np.imag(x)) < 0.1]
     res.append(sel)
+```
 
-
+```{code-cell}
 fig, ax = plt.subplots()
 for k0, sel in zip(k0s, res):
     ax.scatter(sel.real, len(sel) * [299792.458 * k0 / (2 * np.pi)], 0.2, c="C0")
@@ -41,3 +65,4 @@ ax.set_xlim([-1, 1])
 ax.set_ylim(ymin=0)
 ax.legend(["$Real$", "$Imag$"])
 fig.show()
+```

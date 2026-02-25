@@ -8,11 +8,13 @@ parts:
     chapters:
       - file: gettingstarted
       - file: intro
+      - file: notebooks
+        sections:
+           - glob: notebooks/*
       - file: theory
-      - file: params
+  - caption: Technical Details
+    chapters:
       - file: treams
       - file: dev
       - file: about
-  - caption: Notebooks
-    chapters:
-      - glob: notebooks/*
+      
