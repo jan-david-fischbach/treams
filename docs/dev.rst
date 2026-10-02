@@ -38,6 +38,16 @@ Setup the package with ::
 This last step makes the program available in the environment independently of the
 current folder. This is especially necessary for correctly building the documentation.
 
+Alternatively, with `uv <https://docs.astral.sh/uv/>`_ the steps 2 and 3 reduce to ::
+
+   uv sync
+
+which creates ``.venv`` with an editable install of treams and the test dependencies.
+Commands are then run with ``uv run``, e.g. ``uv run pytest tests/unit``. The Cython
+extensions are rebuilt automatically by ``uv run`` and ``uv sync`` after a ``.pyx`` or
+``.pxd`` file changed. If the build fails because ``clang`` is not found, the uv-managed
+Python is outdated; update it with ``uv python upgrade``.
+
 Running tests
 =============
 

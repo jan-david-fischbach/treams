@@ -9,6 +9,66 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "treams"
+dynamic = ["version"]
+description = "T-matrix scattering code for nanophotonic computations"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Dominik Beutel", email = "dominik.beutel@kit.edu"}]
+requires-python = ">=3.8,<3.14"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Cython",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy",
+    "scipy >= 1.6; python_version<='3.9'",
+    "scipy >= 1.14.1,<1.17; python_version>='3.10'",
+]
+
+[project.optional-dependencies]
+coverage = ["Cython", "pytest-cov"]
+docs = ["matplotlib", "jupyter-book < 2", "sphinx-math-dollar"]
+io = ["h5py", "gmsh"]
+test = ["pytest", "pytest-regressions", "pandas"]
+
+[project.urls]
+Homepage = "https://github.com/tfp-photonics/treams"
+
+[dependency-groups]
+dev = ["treams[test,io]"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["treams", "treams.special", "treams.lattice"]
+
+[tool.uv]
+# Rebuild the Cython extensions whenever a source or build file changes.
+cache-keys = [
+    {file = "pyproject.toml"},
+    {file = "setup.py"},
+    {file = "setup.cfg"},
+    {file = "src/**/*.pyx"},
+    {file = "src/**/*.pxd"},
+    {env = "CYTHON_COVERAGE"},
+    {git = {commit = true}},
+]
+
 [tool.isort]
 profile = "black"
 
