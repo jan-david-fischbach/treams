@@ -1,6 +1,6 @@
 clean:
-	find . -type f -name '*.so' -delete
-	find . -type f -name '*.c' -delete
+	find src -type f -name '*.so' -delete
+	find src -type f -name '*.c' -delete
 
 build:
 	rm -rf dist
