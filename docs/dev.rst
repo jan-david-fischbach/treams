@@ -48,6 +48,11 @@ extensions are rebuilt automatically by ``uv run`` and ``uv sync`` after a ``.py
 ``.pxd`` file changed. If the build fails because ``clang`` is not found, the uv-managed
 Python is outdated; update it with ``uv python upgrade``.
 
+In editable installs, extensions whose compiled file is newer than their sources are not
+recompiled. After changing compiler flags in ``setup.py`` or switching off
+``CYTHON_COVERAGE``, remove the compiled files with ``make clean`` to force a full
+rebuild.
+
 Running tests
 =============
 

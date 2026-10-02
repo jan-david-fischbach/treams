@@ -6,9 +6,37 @@ from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext as _build_ext
 
 try:
+    from setuptools.modified import newer_group
+except ImportError:
+    from distutils.dep_util import newer_group
+
+try:
     from Cython.Build import cythonize
 except ImportError:
     cythonize = None
+
+
+class _reusing_build_ext(_build_ext):
+    """build_ext that reuses up-to-date extensions in editable installs."""
+
+    def build_extension(self, ext):
+        """Copy the extension from the source tree if it is newer than its sources.
+
+        Editable installs compile in a fresh temporary directory, which would otherwise
+        rebuild every extension after any change.
+        """
+        if getattr(self, "editable_mode", False) and not os.environ.get(
+            "CYTHON_COVERAGE", False
+        ):
+            build_py = self.get_finalized_command("build_py")
+            inplace_file, regular_file = self._get_inplace_equivalent(build_py, ext)
+            if os.path.exists(inplace_file) and not newer_group(
+                ext.sources + ext.depends, inplace_file
+            ):
+                self.mkpath(os.path.dirname(regular_file))
+                self.copy_file(inplace_file, regular_file)
+                return
+        super().build_extension(ext)
 
 
 if os.name == "nt":
@@ -21,7 +49,7 @@ if os.name == "nt":
     ]
     compile_args = ["-DMS_WIN64"]
 
-    class build_ext(_build_ext):
+    class build_ext(_reusing_build_ext):
         """build_ext for Windows."""
 
         def finalize_options(self):
@@ -39,7 +67,7 @@ if os.name == "nt":
             super().build_extensions()
 
 else:
-    build_ext = _build_ext
+    build_ext = _reusing_build_ext
 
 
 # https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#distributing-cython-modules
